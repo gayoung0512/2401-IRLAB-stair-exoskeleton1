@@ -1,0 +1,5 @@
+ArduinoPinHandleMap.o: \
+ C:/ProgramData/MATLAB/SupportPackages/R2023a/toolbox/target/supportpackages/arduinobase/src/ArduinoPinHandleMap.cpp \
+ D:/data_reconstruction/연구실/GAROONG/[2401]stair-exoskeleton/EMG/emg_real_time_ert_rtw/rtwtypes.h
+
+D:/data_reconstruction/연구실/GAROONG/[2401]stair-exoskeleton/EMG/emg_real_time_ert_rtw/rtwtypes.h:
