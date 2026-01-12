@@ -1,0 +1,15 @@
+https://losskatsu.github.io/machine-learning/epoch-batch/#3-epoch%EC%9D%98-%EC%9D%98%EB%AF%B8
+
+https://www.google.com/search?q=TypeError%3A+default_collate%3A+batch+must+contain+tensors%2C+numpy+arrays%2C+numbers%2C+dicts+or+lists%3B+found+%3CU10&oq=TypeError%3A+default_collate%3A+batch+must+contain+tensors%2C+numpy+arrays%2C+numbers%2C+dicts+or+lists%3B+found+%3CU10&aqs=chrome..69i57j69i58.1055j0j7&sourceid=chrome&ie=UTF-8
+
+https://inuplace.tistory.com/446
+
+https://mopipe.tistory.com/180
+
+https://brstar96.github.io/devlog/shoveling/2020-01-03-device_error_summary/
+
+https://velog.io/@olxtar/nn.Softmax
+
+https://growingsaja.tistory.com/465
+
+https://growingsaja.tistory.com/233
