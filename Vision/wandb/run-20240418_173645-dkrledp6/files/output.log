@@ -1,0 +1,113 @@
+[34m[1mAMP: [39m[22mrunning Automatic Mixed Precision (AMP) checks with YOLOv8n...
+[34m[1mAMP: [39m[22mchecks passed ✅
+WARNING ⚠️ updating to 'imgsz=1280'. 'train' and 'val' imgsz must be an integer, while 'predict' and 'export' imgsz may be a [h, w] list or an integer, i.e. 'yolo export imgsz=640,480' or 'yolo export imgsz=640'
+
+
+
+[34m[1mtrain: [39m[22mScanning D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\dataset\train... 16000 images, 0 corrupt: 100%|██████████| 16000/16000 [00:07<00:00, 2242.15it/s]
+[34m[1mtrain: [39m[22mNew cache created: D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\dataset\train.cache
+
+[34m[1mval: [39m[22mScanning D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\dataset\val... 2000 images, 0 corrupt: 100%|██████████| 2000/2000 [00:02<00:00, 816.66it/s]
+[34m[1mval: [39m[22mNew cache created: D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\dataset\val.cache
+[34m[1moptimizer:[39m[22m Adam(lr=0.001, momentum=0.937) with parameter groups 26 weight(decay=0.0), 27 weight(decay=0.0005), 27 bias(decay=0.0)
+  0%|          | 0/500 [00:00<?, ?it/s]
+Image sizes 1280 train, 1280 val
+Using 8 dataloader workers
+Logging results to [1mruns\classify\train11
+Starting training for 100 epochs...
+
+
+
+      1/100      8.69G      1.692         32       1280:   1%|          | 3/500 [00:48<2:14:03, 16.18s/it]
+Traceback (most recent call last):
+  File "D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\train.py", line 22, in <module>
+    train()
+  File "D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\train.py", line 15, in train
+    results = model.train(data=dir_path+'/dataset', epochs=100, imgsz=[1280,720], rect=True,optimizer='Adam',batch=32, lr0=0.001,device=0)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\model.py", line 338, in train
+    self.trainer.train()
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\trainer.py", line 190, in train
+    self._do_train(world_size)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\trainer.py", line 337, in _do_train
+    self.loss, self.loss_items = self.model(batch)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\nn\modules\module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\nn\modules\module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\nn\tasks.py", line 41, in forward
+    return self.loss(x, *args, **kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\nn\tasks.py", line 211, in loss
+    preds = self.forward(batch['img']) if preds is None else preds
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\nn\tasks.py", line 42, in forward
+    return self.predict(x, *args, **kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\nn\tasks.py", line 59, in predict
+    return self._predict_once(x, profile, visualize)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\nn\tasks.py", line 79, in _predict_once
+    x = m(x)  # run
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\nn\modules\module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\nn\modules\module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\nn\modules\block.py", line 204, in forward
+    return self.cv2(torch.cat(y, 1))
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\nn\modules\module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\nn\modules\module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\nn\modules\conv.py", line 36, in forward
+    return self.act(self.bn(self.conv(x)))
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\nn\modules\module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\nn\modules\module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\nn\modules\conv.py", line 460, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\nn\modules\conv.py", line 456, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 30.00 MiB. GPU 0 has a total capacty of 8.00 GiB of which 0 bytes is free. Of the allocated memory 8.35 GiB is allocated by PyTorch, and 95.67 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+Traceback (most recent call last):
+  File "D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\train.py", line 22, in <module>
+    train()
+  File "D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\train.py", line 15, in train
+    results = model.train(data=dir_path+'/dataset', epochs=100, imgsz=[1280,720], rect=True,optimizer='Adam',batch=32, lr0=0.001,device=0)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\model.py", line 338, in train
+    self.trainer.train()
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\trainer.py", line 190, in train
+    self._do_train(world_size)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\trainer.py", line 337, in _do_train
+    self.loss, self.loss_items = self.model(batch)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\nn\modules\module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\nn\modules\module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\nn\tasks.py", line 41, in forward
+    return self.loss(x, *args, **kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\nn\tasks.py", line 211, in loss
+    preds = self.forward(batch['img']) if preds is None else preds
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\nn\tasks.py", line 42, in forward
+    return self.predict(x, *args, **kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\nn\tasks.py", line 59, in predict
+    return self._predict_once(x, profile, visualize)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\nn\tasks.py", line 79, in _predict_once
+    x = m(x)  # run
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\nn\modules\module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\nn\modules\module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\nn\modules\block.py", line 204, in forward
+    return self.cv2(torch.cat(y, 1))
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\nn\modules\module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\nn\modules\module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\nn\modules\conv.py", line 36, in forward
+    return self.act(self.bn(self.conv(x)))
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\nn\modules\module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\nn\modules\module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\nn\modules\conv.py", line 460, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\nn\modules\conv.py", line 456, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 30.00 MiB. GPU 0 has a total capacty of 8.00 GiB of which 0 bytes is free. Of the allocated memory 8.35 GiB is allocated by PyTorch, and 95.67 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

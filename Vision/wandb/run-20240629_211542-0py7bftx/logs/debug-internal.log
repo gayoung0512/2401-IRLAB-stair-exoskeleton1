@@ -1,0 +1,70 @@
+2024-06-29 21:15:42,152 INFO    StreamThr :41572 [internal.py:wandb_internal():86] W&B internal server running at pid: 41572, started at: 2024-06-29 21:15:42.151134
+2024-06-29 21:15:42,153 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: status
+2024-06-29 21:15:42,158 INFO    WriterThread:41572 [datastore.py:open_for_write():87] open: D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\wandb\run-20240629_211542-0py7bftx\run-0py7bftx.wandb
+2024-06-29 21:15:42,159 DEBUG   SenderThread:41572 [sender.py:send():382] send: header
+2024-06-29 21:15:42,160 DEBUG   SenderThread:41572 [sender.py:send():382] send: run
+2024-06-29 21:15:42,712 INFO    SenderThread:41572 [dir_watcher.py:__init__():211] watching files in: D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\wandb\run-20240629_211542-0py7bftx\files
+2024-06-29 21:15:42,713 INFO    SenderThread:41572 [sender.py:_start_run_threads():1136] run started: 0py7bftx with start time 1719663342.154135
+2024-06-29 21:15:42,716 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: check_version
+2024-06-29 21:15:42,716 DEBUG   SenderThread:41572 [sender.py:send_request():409] send_request: check_version
+2024-06-29 21:15:42,761 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: run_start
+2024-06-29 21:15:42,828 DEBUG   HandlerThread:41572 [system_info.py:__init__():27] System info init
+2024-06-29 21:15:42,828 DEBUG   HandlerThread:41572 [system_info.py:__init__():42] System info init done
+2024-06-29 21:15:42,828 INFO    HandlerThread:41572 [system_monitor.py:start():194] Starting system monitor
+2024-06-29 21:15:42,829 INFO    SystemMonitor:41572 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-06-29 21:15:42,829 INFO    HandlerThread:41572 [system_monitor.py:probe():214] Collecting system info
+2024-06-29 21:15:42,836 INFO    SystemMonitor:41572 [interfaces.py:start():190] Started cpu monitoring
+2024-06-29 21:15:42,837 INFO    SystemMonitor:41572 [interfaces.py:start():190] Started disk monitoring
+2024-06-29 21:15:42,837 INFO    SystemMonitor:41572 [interfaces.py:start():190] Started gpu monitoring
+2024-06-29 21:15:42,838 INFO    SystemMonitor:41572 [interfaces.py:start():190] Started memory monitoring
+2024-06-29 21:15:42,847 INFO    SystemMonitor:41572 [interfaces.py:start():190] Started network monitoring
+2024-06-29 21:15:42,848 DEBUG   HandlerThread:41572 [system_info.py:probe():151] Probing system
+2024-06-29 21:15:42,849 DEBUG   HandlerThread:41572 [gitlib.py:_init_repo():56] git repository is invalid
+2024-06-29 21:15:42,849 DEBUG   HandlerThread:41572 [system_info.py:probe():199] Probing system done
+2024-06-29 21:15:42,849 DEBUG   HandlerThread:41572 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.22621-SP0', 'python': '3.9.0', 'heartbeatAt': '2024-06-29T12:15:42.848901', 'startedAt': '2024-06-29T12:15:42.139140', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'D:\\data_reconstruction\\연구실\\GAROONG\\[2401]stair-exoskeleton\\vision\\train.py', 'codePathLocal': 'train.py', 'codePath': 'train.py', 'host': 'DESKTOP-C602T1E', 'username': 'admin', 'executable': 'C:\\Users\\admin\\anaconda3\\python.exe', 'cpu_count': 14, 'cpu_count_logical': 20, 'cpu_freq': {'current': 3500.0, 'min': 0.0, 'max': 3500.0}, 'cpu_freq_per_core': [{'current': 3500.0, 'min': 0.0, 'max': 3500.0}], 'disk': {'/': {'total': 638.5273399353027, 'used': 82.56998062133789}}, 'gpu': 'NVIDIA GeForce RTX 3070 Ti', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3070 Ti', 'memory_total': 8589934592}], 'memory': {'total': 31.86315155029297}}
+2024-06-29 21:15:42,849 INFO    HandlerThread:41572 [system_monitor.py:probe():224] Finished collecting system info
+2024-06-29 21:15:42,849 INFO    HandlerThread:41572 [system_monitor.py:probe():227] Publishing system info
+2024-06-29 21:15:42,849 DEBUG   HandlerThread:41572 [system_info.py:_save_conda():208] Saving list of conda packages installed into the current environment
+2024-06-29 21:15:52,763 DEBUG   HandlerThread:41572 [system_info.py:_save_conda():220] Saving conda packages done
+2024-06-29 21:15:52,764 INFO    HandlerThread:41572 [system_monitor.py:probe():229] Finished publishing system info
+2024-06-29 21:15:52,776 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: status_report
+2024-06-29 21:15:52,776 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: keepalive
+2024-06-29 21:15:52,777 DEBUG   SenderThread:41572 [sender.py:send():382] send: files
+2024-06-29 21:15:52,777 INFO    SenderThread:41572 [sender.py:_save_file():1403] saving file wandb-metadata.json with policy now
+2024-06-29 21:15:52,782 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: python_packages
+2024-06-29 21:15:52,782 DEBUG   SenderThread:41572 [sender.py:send_request():409] send_request: python_packages
+2024-06-29 21:15:52,783 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-29 21:15:52,783 DEBUG   SenderThread:41572 [sender.py:send_request():409] send_request: stop_status
+2024-06-29 21:15:52,784 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-29 21:15:53,020 DEBUG   SenderThread:41572 [sender.py:send():382] send: telemetry
+2024-06-29 21:15:53,020 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: status_report
+2024-06-29 21:15:58,726 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: status_report
+2024-06-29 21:16:03,804 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: status_report
+2024-06-29 21:16:07,786 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-29 21:16:07,802 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-29 21:16:07,802 DEBUG   SenderThread:41572 [sender.py:send_request():409] send_request: stop_status
+2024-06-29 21:16:08,876 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: status_report
+2024-06-29 21:16:13,950 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: status_report
+2024-06-29 21:16:19,164 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: status_report
+2024-06-29 21:16:22,796 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-29 21:16:22,796 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-29 21:16:22,796 DEBUG   SenderThread:41572 [sender.py:send_request():409] send_request: stop_status
+2024-06-29 21:16:25,030 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: status_report
+2024-06-29 21:16:30,059 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: status_report
+2024-06-29 21:16:35,106 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: status_report
+2024-06-29 21:16:37,810 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-29 21:16:37,810 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-29 21:16:37,810 DEBUG   SenderThread:41572 [sender.py:send_request():409] send_request: stop_status
+2024-06-29 21:16:40,373 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: status_report
+2024-06-29 21:16:42,858 DEBUG   SystemMonitor:41572 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-06-29 21:16:42,858 DEBUG   SenderThread:41572 [sender.py:send():382] send: stats
+2024-06-29 21:16:45,889 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: status_report
+2024-06-29 21:16:51,671 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: status_report
+2024-06-29 21:16:52,811 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-29 21:16:52,827 DEBUG   HandlerThread:41572 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-29 21:16:52,827 DEBUG   SenderThread:41572 [sender.py:send_request():409] send_request: stop_status
+2024-06-29 21:16:55,151 INFO    memory    :41572 [interfaces.py:monitor():140] Process proc.memory.rssMB has exited.
+2024-06-29 21:16:55,151 DEBUG   SystemMonitor:41572 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-06-29 21:16:55,164 DEBUG   SystemMonitor:41572 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-06-29 21:16:55,180 DEBUG   SenderThread:41572 [sender.py:send():382] send: stats
+2024-06-29 21:16:55,259 INFO    MainThread:41572 [internal.py:handle_exit():76] Internal process exited

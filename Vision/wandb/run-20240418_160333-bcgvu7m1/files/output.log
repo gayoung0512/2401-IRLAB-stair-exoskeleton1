@@ -1,0 +1,17 @@
+[34m[1mAMP: [39m[22mrunning Automatic Mixed Precision (AMP) checks with YOLOv8n...
+Downloading https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8n.pt to 'yolov8n.pt'...
+
+
+100%|██████████| 6.23M/6.23M [00:04<00:00, 1.36MB/s]
+[34m[1mAMP: [39m[22mchecks passed ✅
+WARNING ⚠️ updating to 'imgsz=1280'. 'train' and 'val' imgsz must be an integer, while 'predict' and 'export' imgsz may be a [h, w] list or an integer, i.e. 'yolo export imgsz=640,480' or 'yolo export imgsz=640'
+
+
+
+
+
+
+
+
+
+[34m[1mtrain: [39m[22mScanning E:\ROONG\dataset\train... 16000 images, 0 corrupt: 100%|██████████| 16000/16000 [00:20<00:00, 793.41it/s]

@@ -1,0 +1,2 @@
+<exp 설명>
+1st trial (exo_on1): 마지막 cycle만 exo_off

@@ -1,0 +1,152 @@
+[34m[1mAMP: [39m[22mrunning Automatic Mixed Precision (AMP) checks with YOLOv8n...
+[34m[1mAMP: [39m[22mchecks passed ✅
+WARNING ⚠️ updating to 'imgsz=1280'. 'train' and 'val' imgsz must be an integer, while 'predict' and 'export' imgsz may be a [h, w] list or an integer, i.e. 'yolo export imgsz=640,480' or 'yolo export imgsz=640'
+[34m[1mtrain: [39m[22mScanning E:\ROONG\dataset\train... 16000 images, 0 corrupt: 100%|██████████| 16000/16000 [00:00<?, ?it/s]
+[34m[1mval: [39m[22mScanning E:\ROONG\dataset\val... 2000 images, 0 corrupt: 100%|██████████| 2000/2000 [00:00<?, ?it/s]
+[34m[1moptimizer:[39m[22m Adam(lr=0.001, momentum=0.937) with parameter groups 26 weight(decay=0.0), 27 weight(decay=0.0005), 27 bias(decay=0.0)
+Image sizes 1280 train, 1280 val
+Using 8 dataloader workers
+Logging results to [1mruns\classify\train9
+Starting training for 100 epochs...
+      Epoch    GPU_mem       loss  Instances       Size
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      1/100      8.15G     0.2891         32       1280: 100%|██████████| 500/500 [02:07<00:00,  3.91it/s]
+
+               classes   top1_acc   top5_acc:   6%|▋         | 2/32 [00:02<00:37,  1.23s/it]
+Traceback (most recent call last):
+  File "E:\ROONG\train.py", line 19, in <module>
+    train()
+  File "E:\ROONG\train.py", line 12, in train
+    results = model.train(data=dir_path+'/dataset', epochs=100, imgsz=[1280,720], rect=True,optimizer='Adam',batch=32, lr0=0.001,device=0)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\model.py", line 338, in train
+    self.trainer.train()
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\trainer.py", line 190, in train
+    self._do_train(world_size)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\trainer.py", line 379, in _do_train
+    self.metrics, self.fitness = self.validate()
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\trainer.py", line 483, in validate
+    metrics = self.validator(self)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\validator.py", line 160, in __call__
+    for batch_i, batch in enumerate(bar):
+  File "C:\Users\admin\anaconda3\lib\site-packages\tqdm\std.py", line 1178, in __iter__
+    for obj in iterable:
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\data\build.py", line 42, in __iter__
+    yield next(self.iterator)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\dataloader.py", line 1345, in _next_data
+    return self._process_data(data)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\dataloader.py", line 1371, in _process_data
+    data.reraise()
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\_utils.py", line 694, in reraise
+    raise exception
+RuntimeError: Caught RuntimeError in pin memory thread for device 0.
+Original Traceback (most recent call last):
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\_utils\pin_memory.py", line 37, in do_one_step
+    data = pin_memory(data, device)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\_utils\pin_memory.py", line 63, in pin_memory
+    return type(data)({k: pin_memory(sample, device) for k, sample in data.items()})  # type: ignore[call-arg]
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\_utils\pin_memory.py", line 63, in <dictcomp>
+    return type(data)({k: pin_memory(sample, device) for k, sample in data.items()})  # type: ignore[call-arg]
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\_utils\pin_memory.py", line 58, in pin_memory
+    return data.pin_memory(device)
+RuntimeError: CUDA error: out of memory
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+Traceback (most recent call last):
+  File "E:\ROONG\train.py", line 19, in <module>
+    train()
+  File "E:\ROONG\train.py", line 12, in train
+    results = model.train(data=dir_path+'/dataset', epochs=100, imgsz=[1280,720], rect=True,optimizer='Adam',batch=32, lr0=0.001,device=0)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\model.py", line 338, in train
+    self.trainer.train()
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\trainer.py", line 190, in train
+    self._do_train(world_size)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\trainer.py", line 379, in _do_train
+    self.metrics, self.fitness = self.validate()
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\trainer.py", line 483, in validate
+    metrics = self.validator(self)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\validator.py", line 160, in __call__
+    for batch_i, batch in enumerate(bar):
+  File "C:\Users\admin\anaconda3\lib\site-packages\tqdm\std.py", line 1178, in __iter__
+    for obj in iterable:
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\data\build.py", line 42, in __iter__
+    yield next(self.iterator)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\dataloader.py", line 1345, in _next_data
+    return self._process_data(data)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\dataloader.py", line 1371, in _process_data
+    data.reraise()
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\_utils.py", line 694, in reraise
+    raise exception
+RuntimeError: Caught RuntimeError in pin memory thread for device 0.
+Original Traceback (most recent call last):
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\_utils\pin_memory.py", line 37, in do_one_step
+    data = pin_memory(data, device)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\_utils\pin_memory.py", line 63, in pin_memory
+    return type(data)({k: pin_memory(sample, device) for k, sample in data.items()})  # type: ignore[call-arg]
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\_utils\pin_memory.py", line 63, in <dictcomp>
+    return type(data)({k: pin_memory(sample, device) for k, sample in data.items()})  # type: ignore[call-arg]
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\_utils\pin_memory.py", line 58, in pin_memory
+    return data.pin_memory(device)
+RuntimeError: CUDA error: out of memory
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.

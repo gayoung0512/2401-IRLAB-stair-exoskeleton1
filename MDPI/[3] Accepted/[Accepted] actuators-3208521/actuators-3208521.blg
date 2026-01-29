@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: actuators-3208521.aux
+The style file: Definitions/mdpi.bst
+Database file #1: ref.bib
+Warning--can't use both volume and number fields in Hsu2021
+Warning--can't use both volume and number fields in Lee2022
+Warning--there's a number but no series in Archea1979
+Warning--empty journal in Welch1995
+You've used 51 entries,
+            2887 wiz_defined-function locations,
+            925 strings with 14775 characters,
+and the built_in function-call counts, 22362 in all, are:
+= -- 1874
+> -- 1498
+< -- 26
++ -- 655
+- -- 405
+* -- 1983
+:= -- 3417
+add.period$ -- 158
+call.type$ -- 51
+change.case$ -- 51
+chr.to.int$ -- 51
+cite$ -- 55
+duplicate$ -- 1003
+empty$ -- 1736
+format.name$ -- 512
+if$ -- 4700
+int.to.chr$ -- 1
+int.to.str$ -- 51
+missing$ -- 55
+newline$ -- 260
+num.names$ -- 153
+pop$ -- 517
+preamble$ -- 0
+purify$ -- 51
+quote$ -- 0
+skip$ -- 657
+stack$ -- 0
+substring$ -- 1041
+swap$ -- 239
+text.length$ -- 10
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 345
+warning$ -- 4
+while$ -- 173
+width$ -- 0
+write$ -- 630
+(There were 4 warnings)

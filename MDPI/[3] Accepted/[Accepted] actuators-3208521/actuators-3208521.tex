@@ -1,0 +1,1042 @@
+%  LaTeX support: latex@mdpi.com 
+%  For support, please attach all files needed for compiling as well as the log file, and specify your operating system, LaTeX version, and LaTeX editor.
+
+%=================================================================
+\documentclass[actuators,article,accept,pdftex,moreauthors]{Definitions/mdpi} 
+
+%--------------------------
+% Class Options:
+%--------------------------
+%--------------------------
+% journal
+%--------------------------
+% Choose between the following MDPI journals:
+% acoustics, actuators, addictions, admsci, adolescents, aerobiology, aerospace, agriculture, agriengineering, agrochemicals, agronomy, ai, air, algorithms, allergies, alloys, analytica, analytics, anatomia, animals, antibiotics, antibodies, antioxidants, applbiosci, appliedchem, appliedmath, applmech, applmicrobiol, applnano, applsci, aquacj, architecture, arm, arthropoda, arts, asc, asi, astronomy, atmosphere, atoms, audiolres, automation, axioms, bacteria, batteries, bdcc, behavsci, beverages, biochem, bioengineering, biologics, biology, biomass, biomechanics, biomed, biomedicines, biomedinformatics, biomimetics, biomolecules, biophysica, biosensors, biotech, birds, bloods, blsf, brainsci, breath, buildings, businesses, cancers, carbon, cardiogenetics, catalysts, cells, ceramics, challenges, chemengineering, chemistry, chemosensors, chemproc, children, chips, cimb, civileng, cleantechnol, climate, clinpract, clockssleep, cmd, coasts, coatings, colloids, colorants, commodities, compounds, computation, computers, condensedmatter, conservation, constrmater, cosmetics, covid, crops, cryptography, crystals, csmf, ctn, curroncol, cyber, dairy, data, ddc, dentistry, dermato, dermatopathology, designs, devices, diabetology, diagnostics, dietetics, digital, disabilities, diseases, diversity, dna, drones, dynamics, earth, ebj, ecologies, econometrics, economies, education, ejihpe, electricity, electrochem, electronicmat, electronics, encyclopedia, endocrines, energies, eng, engproc, entomology, entropy, environments, environsciproc, epidemiologia, epigenomes, est, fermentation, fibers, fintech, fire, fishes, fluids, foods, forecasting, forensicsci, forests, foundations, fractalfract, fuels, future, futureinternet, futurepharmacol, futurephys, futuretransp, galaxies, games, gases, gastroent, gastrointestdisord, gels, genealogy, genes, geographies, geohazards, geomatics, geosciences, geotechnics, geriatrics, grasses, gucdd, hazardousmatters, healthcare, hearts, hemato, hematolrep, heritage, higheredu, highthroughput, histories, horticulturae, hospitals, humanities, humans, hydrobiology, hydrogen, hydrology, hygiene, idr, ijerph, ijfs, ijgi, ijms, ijns, ijpb, ijtm, ijtpp, ime, immuno, informatics, information, infrastructures, inorganics, insects, instruments, inventions, iot, j, jal, jcdd, jcm, jcp, jcs, jcto, jdb, jeta, jfb, jfmk, jimaging, jintelligence, jlpea, jmmp, jmp, jmse, jne, jnt, jof, joitmc, jor, journalmedia, jox, jpm, jrfm, jsan, jtaer, jvd, jzbg, kidneydial, kinasesphosphatases, knowledge, land, languages, laws, life, liquids, literature, livers, logics, logistics, lubricants, lymphatics, machines, macromol, magnetism, magnetochemistry, make, marinedrugs, materials, materproc, mathematics, mca, measurements, medicina, medicines, medsci, membranes, merits, metabolites, metals, meteorology, methane, metrology, micro, microarrays, microbiolres, micromachines, microorganisms, microplastics, minerals, mining, modelling, molbank, molecules, mps, msf, mti, muscles, nanoenergyadv, nanomanufacturing,\gdef\@continuouspages{yes}} nanomaterials, ncrna, ndt, network, neuroglia, neurolint, neurosci, nitrogen, notspecified, %%nri, nursrep, nutraceuticals, nutrients, obesities, oceans, ohbm, onco, %oncopathology, optics, oral, organics, organoids, osteology, oxygen, parasites, parasitologia, particles, pathogens, pathophysiology, pediatrrep, pharmaceuticals, pharmaceutics, pharmacoepidemiology,\gdef\@ISSN{2813-0618}\gdef\@continuous pharmacy, philosophies, photochem, photonics, phycology, physchem, physics, physiologia, plants, plasma, platforms, pollutants, polymers, polysaccharides, poultry, powders, preprints, proceedings, processes, prosthesis, proteomes, psf, psych, psychiatryint, psychoactives, publications, quantumrep, quaternary, qubs, radiation, reactions, receptors, recycling, regeneration, religions, remotesensing, reports, reprodmed, resources, rheumato, risks, robotics, ruminants, safety, sci, scipharm, sclerosis, seeds, sensors, separations, sexes, signals, sinusitis, skins, smartcities, sna, societies, socsci, software, soilsystems, solar, solids, spectroscj, sports, standards, stats, std, stresses, surfaces, surgeries, suschem, sustainability, symmetry, synbio, systems, targets, taxonomy, technologies, telecom, test, textiles, thalassrep, thermo, tomography, tourismhosp, toxics, toxins, transplantology, transportation, traumacare, traumas, tropicalmed, universe, urbansci, uro, vaccines, vehicles, venereology, vetsci, vibration, virtualworlds, viruses, vision, waste, water, wem, wevj, wind, women, world, youth, zoonoticdis 
+% For posting an early version of this manuscript as a preprint, you may use "preprints" as the journal. Changing "submit" to "accept" before posting will remove line numbers.
+
+%---------
+% article
+%---------
+% The default type of manuscript is "article", but can be replaced by: 
+% abstract, addendum, article, book, bookreview, briefreport, casereport, comment, commentary, communication, conferenceproceedings, correction, conferencereport, entry, expressionofconcern, extendedabstract, datadescriptor, editorial, essay, erratum, hypothesis, interestingimage, obituary, opinion, projectreport, reply, retraction, review, perspective, protocol, shortnote, studyprotocol, systematicreview, supfile, technicalnote, viewpoint, guidelines, registeredreport, tutorial
+% supfile = supplementary materials
+
+%----------
+% submit
+%----------
+% The class option "submit" will be changed to "accept" by the Editorial Office when the paper is accepted. This will only make changes to the frontpage (e.g., the logo of the journal will get visible), the headings, and the copyright information. Also, line numbering will be removed. Journal info and pagination for accepted papers will also be assigned by the Editorial Office.
+
+%------------------
+% moreauthors
+%------------------
+% If there is only one author the class option oneauthor should be used. Otherwise use the class option moreauthors.
+
+%---------
+% pdftex
+%---------
+% The option pdftex is for use with pdfLaTeX. Remove "pdftex" for (1) compiling with LaTeX & dvi2pdf (if eps figures are used) or for (2) compiling with XeLaTeX.
+
+%=================================================================
+% MDPI internal commands - do not modify
+\firstpage{1} 
+\makeatletter 
+\setcounter{page}{\@firstpage} 
+\makeatother
+\pubvolume{1}
+\issuenum{1}
+\articlenumber{0}
+\pubyear{2024}
+\copyrightyear{2024}
+\externaleditor{{Academic Editor: 	Alessio Merola} 
+}
+\datereceived{30 August 2024} 
+\daterevised{25 September 2024} % Comment out if no revised date
+\dateaccepted{8 October 2024} 
+\datepublished{ } 
+%\datecorrected{} % For corrected papers: "Corrected: XXX" date in the original paper.
+%\dateretracted{} % For corrected papers: "Retracted: XXX" date in the original paper.
+\hreflink{https://doi.org/} % If needed use \linebreak
+%\doinum{}
+%\pdfoutput=1 % Uncommented for upload to arXiv.org
+%\CorrStatement{yes}  % For updates
+
+
+%=================================================================
+% Add packages and commands here. The following packages are loaded in our class file: fontenc, inputenc, calc, indentfirst, fancyhdr, graphicx, epstopdf, lastpage, ifthen, float, amsmath, amssymb, lineno, setspace, enumitem, mathpazo, booktabs, titlesec, etoolbox, tabto, xcolor, colortbl, soul, multirow, microtype, tikz, totcount, changepage, attrib, upgreek, array, tabularx, pbox, ragged2e, tocloft, marginnote, marginfix, enotez, amsthm, natbib, hyperref, cleveref, scrextend, url, geometry, newfloat, caption, draftwatermark, seqsplit
+% cleveref: load \crefname definitions after \begin{document}
+
+%=================================================================
+% Please use the following mathematics environments: Theorem, Lemma, Corollary, Proposition, Characterization, Property, Problem, Example, ExamplesandDefinitions, Hypothesis, Remark, Definition, Notation, Assumption
+%% For proofs, please use the proof environment (the amsthm package is loaded by the MDPI class).
+%MDPI: Notes for Authors 
+%1. The initial layout for your manuscript was done by our layout team. Please do not change the layout, otherwise we cannot proceed to the next step. 
+%2. Please do not delete our comments. 
+%3. Please revise and answer all questions that we proposed. Such as: “It should be italic”; “I confirm”; “I have checked and revised all.” 
+%4. Please directly correct on this version.  
+%5. Please make sure that all the symbols in the paper are of the same format. 
+%6. Please note that at this stage (the manuscript has been accepted in its present content/format) we will not accept authorship or content changes to the manuscript text.  
+%7. Please note that we will keep the original format or revise the issues by ourselves if the comments are not replied.
+
+%=================================================================
+% Full title of the paper (Capitalized)
+\Title{Adaptive Vision-Based Gait Environment Classification for Soft Ankle Exoskeleton}
+
+% MDPI internal command: Title for citation in the left column
+\TitleCitation{Adaptive Vision-Based Gait Environment Classification for Soft Ankle Exoskeleton}
+
+% Author Orchid ID: enter ID or remove command
+%\newcommand{\orcidauthorA}{0000-0000-0000-000X} % Add \orcidA{} behind the author's name
+%\newcommand{\orcidauthorB}{0000-0000-0000-000X} % Add \orcidB{} behind the author's name
+
+% Authors, for the paper (add full first names)
+\Author{\hl{Gayoung Yang} %MDPI: Please carefully check the accuracy of names and affiliations.
+ $^{1}$, Jeong Heo $^{2}$ and Brian Byunghyun Kang $^{1,3,}$*}
+
+%\longauthorlist{yes}
+
+% MDPI internal command: Authors, for metadata in PDF
+\AuthorNames{Gayoung Yang, Jeong Heo and Brian Byunghyun Kang}
+
+% MDPI internal command: Authors, for citation in the left column
+\AuthorCitation{\hl{Yang, G.;} %MDPI: Please carefully check the accuracy of names and affiliations.
+ Heo, J.; Kang, B.B.} 
+% If this is a Chicago style journal: Lastname, Firstname, Firstname Lastname, and Firstname Lastname.
+
+% Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
+\address{%
+$^{1}$ \quad School of Intelligent Mechatronics Engineering, Sejong University, 209 \hl{Neungdong-ro, } \mbox{Seoul 05006, Republic of Korea;} didrkdud0512@sju.ac.kr\\
+$^{2}$ \quad Department of Mechanical Engineering, Incheon National University, 119 \hl{Academy-ro,}  \mbox{Incheon 22012, Republic of Korea;} nzweib292@inu.ac.kr\\
+$^{3}$ \quad Department of Artificial Intelligence and Robotics, Sejong University, 209 \hl{Neungdong-ro,}  \mbox{Seoul 05006, Republic of Korea}} %MDPI: Please confirm, we have deleted the provinces from the affiliation, as this is not the required information.
+
+% Contact information of the corresponding author
+\corres{Correspondence: brianbkang@sejong.ac.kr}
+
+% Current address and/or shared authorship
+%공저자 있을 때 넣는 부분..??
+%\firstnote{Current address: Affiliation.}  % Current address should not be the same as any items in the Affiliation section.
+%\secondnote{These authors contributed equally to this work.}
+% The commands \thirdnote{} till \eighthnote{} are available for further notes
+
+%\simplesumm{} % Simple summary
+
+%\conference{} % An extended version of a conference paper
+
+% Abstract (Do not insert blank lines, i.e. \\) 
+\usepackage{color}
+\abstract{Lower limb exoskeletons have been developed to improve functionality and assist with daily activities in various environments. Although these systems utilize sensors for gait phase detection, they lack anticipatory information about environmental changes, which limits their adaptability.
+This paper presents a vision-based intelligent gait environment detection algorithm for a lightweight ankle exosuit designed to enhance gait stability and safety for stroke patients, particularly during stair negotiation. 
+{The proposed system employs YOLOv8 for real-time environment classification, combined with a long short-term memory (LSTM) network for spatio-temporal feature extraction, enabling the precise detection of environmental transitions.} An experimental study evaluated the classification algorithm and soft ankle exosuit performance through three conditions using kinematic analysis and muscle activation measurements. {The algorithm achieved an overall accuracy of over 95\% per class, which significantly enhanced the exosuit's ability to detect environmental changes, and thereby improved its responsiveness to various conditions.
+  Notably, the exosuit increased the ankle dorsiflexion angles and reduced the muscle activation during the stair ascent, which enhanced the foot clearance.
+The results of this study indicate that advanced spatio-temporal feature analysis and environment classification improve the exoskeleton's gait assistance, improving adaptability in complex environments for stroke patients.}}
+%A single paragraph of about 200 words maximum.
+
+% Keywords
+\keyword{lower limb exosuit; environment classification system; gait assistance} 
+%List three to ten pertinent keywords specific to the article; yet reasonably common within the subject discipline.
+
+
+% The fields PACS, MSC, and JEL may be left empty or commented out if not applicable
+%\PACS{J0101}
+%\MSC{}
+%\JEL{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Diversity
+%\LSID{\url{http://}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Applied Sciences
+%\featuredapplication{Authors are encouraged to provide a concise description of the specific application or a potential application of the work. This section is not mandatory.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Data
+%\dataset{DOI number or link to the deposited data set if the data set is published separately. If the data set shall be published as a supplement to this paper, this field will be filled by the journal editors. In this case, please submit the data set as a supplement.}
+%\datasetlicense{License under which the data set is made available (CC0, CC-BY, CC-BY-SA, CC-BY-NC, etc.)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Toxins
+%\keycontribution{The breakthroughs or highlights of the manuscript. Authors can write one or two sentences to describe the most important part of the paper.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Encyclopedia
+%\encyclopediadef{For entry manuscripts only: please provide a brief overview of the entry title instead of an abstract.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Advances in Respiratory Medicine
+%\addhighlights{yes}
+%\renewcommand{\addhighlights}{%
+
+%\noindent This is an obligatory section in “Advances in Respiratory Medicine”, whose goal is to increase the discoverability and readability of the article via search engines and other scholars. Highlights should not be a copy of the abstract, but a simple text allowing the reader to quickly and simplified find out what the article is about and what can be cited from it. Each of these parts should be devoted up to 2~bullet points.\vspace{3pt}\\
+%\textbf{What are the main findings?}
+% \begin{itemize}[labelsep=2.5mm,topsep=-3pt]
+% \item First bullet.
+% \item Second bullet.
+% \end{itemize}\vspace{3pt}
+%\textbf{What is the implication of the main finding?}
+% \begin{itemize}[labelsep=2.5mm,topsep=-3pt]
+% \item First bullet.
+% \item Second bullet.
+% \end{itemize}
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\setcounter{section}{-1} %% Remove this when starting to work on the template.
+%\section{How to Use this Template}
+
+%The template details the sections that can be used in a manuscript. Note that the order and names of article sections may differ from the requirements of the journal (e.g., the positioning of the Materials and Methods section). Please check the instructions on the authors' page of the journal to verify the correct order and names. For any questions, please contact the editorial office of the journal or support@mdpi.com. For LaTeX-related questions please contact latex@mdpi.com.%\endnote{This is an endnote.} % To use endnotes, please un-comment \printendnotes below (before References). Only journal Laws uses \footnote.
+
+% The order of the section titles is different for some journals. Please refer to the "Instructions for Authors” on the journal homepage.
+
+\section{Introduction}
+Stroke patients commonly exhibit functional impairments, such as muscle weakness and sensorimotor deficits, with gait disturbances significantly restricting their functional independence in daily activities~\cite{Carolee2016,Perry1995,Bohannon2007}. Due to decreased strength and impaired balance, they exhibit a pathological hemiparetic gait pattern characterized by a reduced gait speed, a prolonged stance phase duration, and an extended double support period~\cite{woolley2001,Sandra1996}. Stroke patients exhibit foot drop, characterized by the weakness of the primary dorsiflexor muscles or shortening of plantarflexor muscles, which impairs their ability to perform dorsiflexion during gait~\cite{Balaban2014,Ramsay2014,Moseley1993}. A reduction in foot clearance during the swing phase of the gait cycle results in pathological gait patterns, such as circumduction gait or steppage gait~\cite{Chen2005,Li2018,Mufadal2006,Roche2015}. Particularly, during stair ascent, the diminished foot clearance due to foot drop results in insufficient clearance between the foot and the stair nosing, thereby increasing the risk of a fall due to potential contact between the foot and the stair nosing~\cite{Agha2021}.
+
+Stair ambulation is a common activity in daily life; however, it is considered a challenging task compared with level walking due to the increased demands on the joint range of motion and muscular moments in the lower extremities~\cite{Andriacchi1980}. Additionally, stroke patients exhibit greater force and oxygen consumption during stair ambulation compared with healthy people, leading to an increased metabolic cost~\cite{Jacobs2016,Novak2012}.
+Consequently, a lower limb exoskeleton has been developed to assist with gait in stair environments~\cite{Hsu2021,Lee2022,Bishe2021}. Lower limb exoskeletons enhance user functionality and assist in daily activities by transmitting assistive forces to the lower limb joints during locomotion. Yinsheng Xu et al. proposed a soft exosuit that assists hip flexion during stair climbing by utilizing angular information of the hip joint, which effectively reduces the metabolic consumption and muscle fatigue in users~\cite{Xu2023}. Ying Fang et al. developed a wearable adaptive ankle exoskeleton that leverages torque balance information based on the forefoot force to assist ankle moment~\cite{Fang2021}. Lee et al. created a knee assistive exosuit that aids stair ascent and descent movements by distinguishing the current gait phase through insole sensors~\cite{Lee2020}.
+
+Insole sensors and inertial measurement unit (IMU) sensors provide valuable information regarding the current state of the gait, making them useful for gait phase detection~\cite{Han2019,Pappas2001}. However, they do not offer prior information about the gait environment, which impedes the ability to anticipate environmental changes in advance. Consequently, research on vision-based environmental perception algorithms for exoskeletons was conducted~\cite{Liu2019,Yang2023}. This approach is motivated by the observation that humans inherently utilize visual information to acquire prior knowledge of their gait environments, thereby facilitating more effective navigation and adaptation.
+
+Visual factors play a critical role in stair negotiation. According to the Stair Behavior Model, the process of stair negotiation involves several stages: an initial conceptual scan for sensory input, hazard detection, route choice, visual perception of the step location, and continuous monitoring scans~\cite{Templer1995}. Disturbances during these stages can lead to an increased risk of a fall~\cite{Coleman2004}. Camera-based gait environment recognition functions similarly to the visual recognition of step location and continuous monitoring stages within the human vision system, thereby enhancing gait stability during assistance with a lower limb exoskeleton. Specifically, the vision system of an exoskeleton performs the role of ambient vision by detecting peripheral fields, which contributes to the awareness of the surrounding environment, improves posture stabilization, and provides guidance for locomotion.
+
+{To enhance the overall performance of the vision system, deep learning-based methodologies can be employed. Recent advancements in the deep learning model have significantly influenced diverse fields, including robotics, such as robot control and intention detection, leading to enhanced performance and novel methodologies~\cite{Coser2024}. Large Language Models (LLMs) have revolutionized natural language processing by advancing capabilities in text generation, high-level reasoning, and multimodal tasks, thereby transforming human--robot interaction across various domains~\cite{Zhao2023,Zhang2023}. Additionally, Kolmogorov--Arnold Networks (KANs) present a novel approach by replacing conventional neural network weights with learnable activation, offering enhanced accuracy and mechanistic interpretability~\cite{Liu2024,Cheon2024}. Furthermore, YOLOv8 represents a significant advancement in the domain of real-time object detection, enhancing both computational speed and accuracy, thereby proving effective for applications in video analysis and environment classification~\cite{Sohan2024,Hussain2023}. Nevertheless, the integration of deep learning-based environment classification into assistive robotics applications remains underexplored, despite the significant advancements in the field.}
+
+Enrica Tricomi et al. created a hip exosuit that integrates IMU-based gait phase detection with RGB camera vision and convolutional neural network (CNN)-based environmental classification for adaptive gait assistance~\cite{Tricomi2023}. This approach achieves an overall accuracy of 85\% in the real-time classification of gait environments and reduces the user's metabolic cost by approximately 20\%. However, the system demonstrates a limitation, with a decreased accuracy of less than 80\% during transition phases between gait environments, leading to an increased rate of misclassification. This study does not specifically target stroke patients, and stroke patients exhibit greater asymmetry in the ankle joint compared with the hip joint~\cite{Ogihara2020}. Therefore, assistance for the ankle joint is required more than for the hip joint to maintain lower limb stability.
+
+
+This paper presents a vision-based intelligent gait environment detection algorithm for a lightweight ankle exosuit for stroke patients. It introduces an advanced environmental recognition algorithm by leveraging {YOLOv8} for detailed gait environment segmentation and applies {LSTM}, which utilizes spatio-temporal features to improve the accuracy during transitions when environmental changes occur.
+In stair negotiation, the visual confirmation of the first step is considered a critical factor in transitioning from level walking to stair navigation~\cite{Archea1979}. In particular, falls on stairs typically occur during the initial or final three steps when the gait environment changes~\cite{Templer1995}. Therefore, it is essential to accurately and rapidly recognize stairs during gait assistance to adapt to environmental changes. 
+%Particularly for stroke patients, who often experience foot drop and unstable gait, preemptive environmental recognition and fast response are crucial to mitigate the risk of falls in stair environments. 
+Thus, segmenting the stair environment into multiple stages, including the initial and final stages of the stair ascent and descent, can enhance the gait stability and improve the environmental recognition accuracy.
+To verify the performance of the proposed method, experiments were conducted with a healthy subject. 
+
+
+\section{Soft Exosuit}
+
+\subsection{Soft Exosuit Design}
+The soft ankle exosuit is constructed from flexible and lightweight materials that conform to the user's movements, providing assistive forces to the ankle through a tendon-driven mechanism. 
+The exosuit consists of vest, waist belt, leg brace, and foot wearable components. The vest integrates the actuation unit and a camera (Logitech BRIO 4K Ultra HD Pro), which is mounted at the chest position to capture the gait environment.
+The leg brace is connected to the thigh strap and shin brace along the lateral side of the lower limb, forming a tendon path. To analyze the kinematics of the shin and thigh during gait phase detection, an IMU (mpu6050) is attached to the shin and thigh positions of the leg brace, respectively. The foot wearable includes anchor points in the toe and heel regions to assist with ankle dorsiflexion and plantarflexion.
+
+The actuation unit of the exosuit consists of a motor, two Bowden cables, and a single pulley. The pulley, with a diameter of 61 mm, is directly connected to the shaft of the motor (Ak809, Cubemars, China). The system was designed with an antagonistic structure, wherein the cables are wound in opposite directions to facilitate both dorsiflexion and plantarflexion movements. The cables attached to the pulley are connected to anchor points located at the toe and heel of the foot wearable, thereby transmitting torque to the ankle and providing assistive support. In the counterclockwise direction, the mechanism pulls the toe section to assist dorsiflexion, while simultaneously inducing slack in the wire connected to the heel anchor point. Conversely, when driven clockwise, the system supports plantarflexion by pulling on the heel portion and generates slack in the wire attached to the toe anchor point, thereby preventing restriction of the ankle. The actuation unit, which includes the motor, a 22.2 V Li-ion battery, and the control device (Arduino Uno), is positioned on the rear of the user's vest. This placement ensures proximity to the body's center of gravity, thereby distributing the applied forces more effectively across the user's body. The wires utilized are bicycle brake cables, which extend from the pulley of the actuation unit mounted on the back, through a sheath along the shin, and are subsequently attached to the anchor points on the foot wearable.
+
+
+\subsection{Control Strategy}
+Environmental data, captured via a camera, are classified into one of three conditions (level ground, stair ascent, or stair descent) using a vision-based system. The label value of the walking environment, denoted as vision data $k${, defined} as Equation (1), is subsequently transmitted to Simulink via user datagram protocol (UDP) communication.
+\begin{linenomath}
+\begin{equation}
+\text{$VisionData$}\; k =\begin{cases} 
+1 & \text{$DC$ condition : stair descent} \\ 
+2 & \text{$IC$ condition : stair ascent} \\
+3 & \text{$LG$ condition : level ground}
+\end{cases}
+\end{equation}
+\end{linenomath}
+The $MotorInputData$ processed according to Equation (3) inform the motor input parameters{, derived} from the shank angular velocity $w_s$ and thigh angular velocity $w_t$, outlined in Equation (2). These data are specifically tailored to each environmental context, thereby dictating differentiated motor operations for each gait environment.
+\begin{linenomath}
+\begin{equation}
+\begin{aligned}
+\text{$LGData=GaitPhaseData(w_s)$} \\
+\text{$ICData=GaitPhaseData(w_s,w_t)$} \\
+\text{$DCData=GaitPhaseData(w_s)$}
+\end{aligned}
+\end{equation}
+\end{linenomath}
+
+\begin{linenomath}
+\begin{equation}
+\begin{aligned}
+\text{$MotorInputData$}(k) = & \frac{1}{2}\;(4-k)(2-k)(1-k) \times \text{$LGData$}\\
+& + (3-k)(k-1) \times \text{$ICData$}\\
+& + \frac{1}{2}\;k(2-k)(3-k) \times \text{$DCData$} 
+\end{aligned}
+\end{equation}
+\end{linenomath}
+
+
+
+The motor operates based on the $GaitPhaseData$, which is classified according to the specific gait environment, thereby implementing the appropriate control method for each condition, as shown in Figure~\ref{control flowchart}. In level walking, dorsiflexion is assisted during the toe-off phase, and plantarflexion is supported during the foot-flat phase to maintain the foot in a horizontal alignment~\cite{Inman1953,Shorter2012,Whittle2014}. During a stair ascent, increased assistive force is provided compared with level walking, with enhanced dorsiflexion support at the toe-off phase (forward continuance) and a gradual unloading using current control until just before toe-off~\cite{Karekla2018}. During a stair descent, dorsiflexion assistance during the toe-off phase (leg pull-through) is complemented by plantarflexion just before the foot placement, ensuring the foot is level upon contact.
+
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{Figure/Figure 1.png}
+\caption{\hl{Flowchart of gait-}%MDPI: we moved all figures closed to the first citation, please confirm.
+ environment-based exoskeleton control strategy. \label{control flowchart}}
+\end{figure}   %EE: Attention AE: Please edit "Velocity from IMU Sensor" to "velocity from IMU sensor", edit "Classification (LG,IC,DC)" to "classification (LG, IC, DC)", edit "Environment-based Exoskeleton" to "environment-based exoskeleton", edit "Ground" to "ground", and edit "else" to "Else".
+
+Toe-off detection utilizes an IMU positioned on the affected thigh and shin of the subject. IMU is oriented with the positive Y-axis directed toward the head and the positive Z-axis directed outward, away from the thigh and shank. In gait phase detection using IMU values from the thigh and shank, the correction of input signals is required to mitigate the impact of extraneous noise. To address this, a Kalman filter is implemented within Simulink for processing the IMU data collected via Arduino Uno~\cite{Welch1995}. The timing of the toe-off phase within the gait cycle is determined based on the Z-axis angular velocity values collected from the thigh and shank across various walking environments~\cite{Winter2009,Zeng2011}. In a stationary state, the Z-axis angular velocity attains a value of zero and exhibits a consistent pattern across different gait cycles, irrespective of the walking environment. During the heel-off phase, the Z-axis angular velocity decreases, reaching a minimum just before the toe-off phase. The value then increases at the onset of the toe-off phase, reaching a maximum during the mid-swing phase. Subsequently, during the heel-strike phase, the Z-axis angular velocity attains a value of zero. From the foot-flat phase through to the heel-off phase, the Z-axis angular velocity decreases in the negative direction. The repetitive pattern of Z-axis angular velocities during the gait cycle facilitates the identification of the toe-off initiation, marked by an increase from a negative value immediately after reaching the minimum. To prevent the misidentification of toe-off due to noise in a stationary state, a threshold is set such that only values greater than twice the maximum absolute angular velocity measured at rest are recognized as part of the gait phase. Consequently, the initiation of dorsiflexion assistance commences once this threshold is surpassed, displaying characteristics indicative of toe-off.
+
+Motor control is performed through an integrated electric speed controller (ESC) using position control. Communication with the control device is facilitated using the controller area network (CAN) protocol, with an MCP2515 module connected to the Arduino. Upon the detection of the necessary characteristics, the drive information is transmitted to the motor's ESC in CAN data format via Simulink, causing the motor to rotate sufficiently to wind the wire and transmit appropriate torque at the toe-off phase. The motor's angle is calculated by dividing the required stroke length for positioning the peel or toe by the radius of the pulley.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Environment Recognition System}
+\subsection{{Data Acquisition and Class Definition}}
+A customized dataset was constructed by recording a single female participant walking at her preferred pace on both level ground and stair environments while wearing a soft ankle exosuit. Each frame in the walking dataset videos was captured at a resolution of 960 × 540 pixels. For the training dataset, which initially consisted of 8000 images, data augmentation techniques, including rotation, shear, brightness adjustment, blur, and noise addition, were applied to generate a total of 16,000 images. To address the class imbalance within the dataset, both undersampling and oversampling techniques were employed for different labels. The final dataset was partitioned into 16,000 training images, 2000 validation images, and 2000~test images, following an 8:1:1 ratio.
+As shown in Figure~\ref{dataset}, the customized dataset utilized in this study was categorized into seven distinct gait environments to enhance the accuracy during the transition phases: level ground ($LG$), initial incline ($IC_{\text{prev}}$), incline ($IC$), final incline ($IC_{\text{next}}$), initial decline ($DC_{\text{prev}}$), decline ($DC$), and final decline ($DC_{\text{next}}$).
+
+
+
+Classification was based on the ratio of stairs within the frame and the weight acceptance phase of the gait cycle. The weight acceptance phase, characterized by both feet being in contact with the ground, represents a relatively stable double-stance phase with minimal dynamic motion, facilitating more accurate image classification. \hl{See Table}~\ref{tab5}.
+%MDPI: The citation of this table was missing, so we added it here. Please check if the placement of this citation is appropriate. If not, please revise. Note that it is necessary for each table to be cited in text
+
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{Figure/Figure 2.png}
+\caption{Exoskeleton setup for dataset collection and the acquired gait environment image data: (\textbf{A})~wearable camera system of soft exosuit prototype and (\textbf{B}) RGB images of gait environments categorized by stair incline and decline, including specific walking environment classes and training datasets.\label{dataset}}
+\end{figure}   %MDPI:: Attention : Please edit "camera" to "Camera".
+
+
+\begin{table}[H] 
+\caption{\hl{Definitions and labeling} 
+ criteria for the seven classes that distinguished specific gait environments, including the initial and final stages of level ground and stair environments.\label{tab5}}
+\begin{tabularx}{\textwidth}{cX}%tabularx: 테이블 각 열의 폭 조정 = C: 중앙 정렬된 고정된 폭을 가지는 열, X: 가변 폭의 열
+\toprule
+\textbf{Environment}&\textbf{Class Definition}\\
+\midrule
+$LG$		                   & Stairs occupy less than half of the image.			\\
+\hline
+\multirow[m]{2}{*}{$IC_{\text{prev}}$}	& Stairs occupy more than half of the image. \par From the mid-swing phase to the weight-acceptance phase of the leg ascending the initial step of the stairs.\\
+\hline
+$IC$	& Stairs occupy the entire image.			\\
+\hline
+\multirow[m]{2}{*}{$IC_{\text{next}}$}		 &Stairs occupy more than half of the image. \par From the mid-swing phase to the weight-acceptance phase of the leg ascending the final step of the stairs.\\
+\hline
+\multirow[m]{2}{*}{$DC_{\text{prev}}$}     & Stairs occupy more than half of the image. \par From the mid-swing phase to the weight-acceptance phase of the leg descending the initial step of the stairs.\\
+\hline
+$DC$	& Stairs occupy the entire image.\\
+\hline
+\multirow[m]{2}{*}{$DC_{\text{next}}$}	    & Stairs occupy more than half of the image. \par From the mid-swing phase to the weight-acceptance phase of the leg descending the final step of the stairs.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+
+
+\subsection{{YOLO Model Training}} %MDPI: For this section please double check that the following details are provided for all cases: company names and addresses (city, country) of the instruments, agents and softwares used. For USA or Canadian companies, please provide the state name as well (i.e., city name, abbreviated state name, USA/Canada).
+\hl{The }YOLO algorithm is {an} object detection framework widely utilized in various computer vision fields~\cite{Redmon2016}. In contrast to conventional two-stage detectors, which perform detection through a region-proposal method and utilize a classifier, YOLO adopts a one-stage detection approach by framing object detection as a regression problem. The YOLO model predicts multiple bounding boxes and class probabilities concurrently within a single convolutional network. This necessitates a less complex pipeline compared with other object detection systems, resulting in extremely rapid real-time detection speeds. Furthermore, it processes input images globally, thereby effectively leveraging contextual information and demonstrating superior generalization capabilities. In this study, rapid detection in response to the gait environment transition and the ability to analyze the spatial global information were crucial. Therefore, adopting the YOLO model was particularly suitable due to its aforementioned characteristics.
+The recently released YOLOv8 incorporates a modified CSP Darknet32 backbone into its architecture~\cite{Terven2023}. This backbone modification significantly enhances the model's capabilities, ensuring an optimal performance across diverse scenarios and tasks. The YOLOv8 model was selected for its lightweight nature, low computational requirements, and superior accuracy compared with previous versions.
+YOLOv8 differentiates itself from previous YOLO networks through several key innovations. It replaces the C3 module with the C2f module, which operates with slightly fewer parameters while maintaining similar performance levels. The backbone of YOLOv8 was optimized by replacing 6 × 6 convolutional layers with 3 × 3 convolutional layers, effectively halving the total number of parameters. %Additionally, two convolutional layers before upsampling have been removed, and the initial 1x1 convolutional layer in the bottleneck has been substituted with a 3x3 layer. These changes contribute to a more efficient architecture.
+Furthermore, YOLOv8 removes the objectness branch responsible for calculating confidence scores and implements a decoupled head for regression and classification. This adjustment results in faster processing speeds and improved average precision (AP) compared with the single-head approach of earlier YOLO models. Additionally, YOLOv8 employs an anchor-free detection method, which directly predicts object centers rather than resizing anchor boxes to fit object sizes. This approach reduces the number of bounding box predictions and accelerates the non-maximum suppression (NMS) process.
+
+%MDPI: Please state the version number of the software.
+The YOLOv8 model was trained using the \hl{PyTorch} framework on a workstation equipped with an \hl{Intel} i5-13600KF CPU and an \hl{NVIDIA} RTX 3070 GPU. Hyperparameter tuning was performed to optimize the model's performance, resulting in the selection of the most effective hyperparameters. The training process was set for 100 epochs but was halted at epoch 92 due to early stopping. The batch size was configured to 16, the learning rate was set to 0.0001, and the Adam optimizer was utilized to enhance the model’s training efficiency. The trained YOLO model was evaluated on the test dataset, yielding a high accuracy of 99.3\%. %MDPI: For this section please double check that the following details are provided for all cases: company names and addresses (city, country) of the instruments, agents and softwares used. For USA or Canadian companies, please provide the state name as well (i.e., city name, abbreviated state name, USA/Canada).
+
+\subsection{{LSTM-Based Spatio-Temporal Feature Extraction}}
+Gait is a form of time-series data in which characteristics such as the gait environment and joint angles change over the time domain. To accurately classify the gait environment, it is more appropriate to consider both past and future contexts relative to the current frame, rather than relying solely on the current frame. Accordingly, an LSTM model, which was trained on sequential time-series data, was selected.
+
+LSTM is a recurrent neural network{ (RNN)} designed to train long-term dependencies in sequential data and demonstrates superior performance by overcoming the vanishing and exploding gradient problems inherent in traditional RNN~\cite{Graves2012}. An LSTM unit consists of a forget gate, an input gate, an output gate, and a cell. The gates regulate the flow of information within the cell; the forget gate determines which information from the previous cell state should be discarded, the input gate decides how much new information should be added to the cell state based on the current and past inputs, and the output gate determines which information is output from the memory cell. The LSTM network, applied across various domains, such as computer vision, text recognition, and natural language processing, exhibits exceptional performance when analyzing the spatio-temporal features of sequential data.
+
+Figure~\ref{model} illustrates the overall vision system for the gait environment classification. The YOLO framework performed real-time analysis of each video frame, classifying the environment into distinct environment conditions, such as level ground, early stair, mid stair, and late stair. This environmental classification provided crucial contextual information for the LSTM, facilitating its understanding of transitions across diverse environments. These classification outputs were subsequently organized into sequences that reflected the temporal progression of the gait environment. Each frame within these sequences was annotated with its corresponding environmental classification, thereby preserving temporal features for the LSTM's analysis. By providing subdivided context regarding the current gait environment through the YOLO output, the LSTM effectively extracted relevant features corresponding to each phase of the stair negotiation, which improved its predictive capability for environment transitions and enhanced the overall classification accuracy between the level ground and stair conditions.
+
+\begin{figure}[H] %MDPI: Please check can it be added more explanation for numbers and letters, and please check if ``(10,8)'' is decimal number, comma according to the rules it should be replaced to dot.
+\begin{adjustwidth}{-\extralength}{0cm}
+\hspace*{\fill} 
+\includegraphics[width=18cm]{Figure/Figure 3.png}
+\end{adjustwidth}
+\caption{\hl{Overall} architecture and model design of the gait environment classification algorithm combining YOLO for environment classification and LSTM for sequence feature extraction.\label{model}}
+\end{figure}  %EE: Attention AE: Please edit "input" to "Input", edit "environment" to "Environment", edit "output" to "Output", edit "feature" to "Feature" (twice), edit "frame" to "Frame", edit "fully" to "Fully", edit "softmax" to "Softmax", and edit "class" to "Class".
+
+
+
+In this study, the LSTM model utilized the frame-wise probabilities for each class and the most probable class extracted from the YOLO method as the training data. To create the time-series data, the training videos were extracted at 20 frames per second (FPS), and labeling was performed by assigning one class label for every ten frames. The stride was set to five, which resulted in four labels per second. For the LSTM data preparation, a maximum voting technique was initially applied to label the most probable class. If there was a tie in the class probabilities, an average voting technique was used, where the class with the highest average probability was chosen. The shape of the LSTM data was (1714, 10, 8), which consisted of sequences of data with ten time steps, and each contained eight features. The validation dataset, which was proportionally divided with an 8:1 ratio compared with the training dataset, contained 209 sequences.
+The LSTM model was trained for 1000 epochs with a batch size of 32 and a learning rate of 0.001, and it utilized the Adam optimizer. Upon completing the training, the model's performance was evaluated on the test dataset to calculate the accuracy and assess the overall performance using various evaluation metrics. The model demonstrated a high level of accuracy, where it achieved 98.93\% on the test dataset, indicating its exceptional performance.
+
+\section{Experiment}
+To evaluate the performance of the gait environment classification algorithm in real time, an experimental study was conducted with a female participant (height: 162 {cm}, weight: 47 {kg}). {The experiments were conducted in an indoor environment within a building, utilizing straight stairs with a tread depth of 28 {cm} and a rise height of 16 {cm}. The experimental setup was characterized by uniform lighting conditions, unaffected by sunlight, and featured a tread width of 1.2 {m}, which ensured that both edges of the staircase were captured by the camera.} The procedure involved the participant walking at a constant speed from a starting point on level ground, ascending a staircase consisting of eight steps, traversing a circular path on the level ground, and subsequently descending the same staircase to return to the initial starting point. The experimental protocol for this study is illustrated in Figure~\ref{exp}.
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{Figure/Figure 4.png}
+\caption{\hl{Experimental} %MDPI: Please add the explanation for sub-figure 4B in the figure.
+ protocol for evaluating the exosuit performance across various walking environments, including\label{exp} the experimental prototype that consisted of an exosuit, camera, and inertial sensor. The blue lines represent the TA and MG muscles for measuring the dorsiflexion and plantarflexion muscle activity, respectively. (\textbf{A}) The participant performed stair ascent, stair descent, and level ground gaits in both stair and level ground experimental environments.}
+\end{figure}   %MDPI: Attention : Please edit "exosuit" to "Exosuit", edit "camera" to "Camera", edit "Gastrocnemius" to "gastrocnemius", edit "Anterior" to "anterior", and edit "inertial sensor" to "Inertial sensors".
+
+
+To assess the performance of the soft ankle exosuit, the experiment was conducted under three distinct conditions: (1) without the exosuit (\textit{no exo}), (2) the exosuit worn but unpowered (\textit{exo off}), and (3) the exosuit worn and powered (\textit{exo on}). Prior to the experiment, the participant underwent a 10-minute familiarization process with the exosuit to adapt to its movement. Additionally, a 20-minute rest interval was implemented between each experimental condition to prevent any residual effects from impacting subsequent conditions.
+
+
+For the analysis of human kinematics, an inertial motion capture system, the Xsens MTw Awinda System (Xsens Technologies BV, Enschede, The Netherlands), was utilized. This system was attached to the participant's foot and mid-shank to analyze the ankle joint angles in the sagittal plane, with the data collected using \hl{Xsens Analyze software}.%MDPI: Please state the version number of the software.
+~Surface electromyography (sEMG) sensors (LAXTHA Inc., \hl{Daejeon,} %MDPI: Newly added  information. Please confirm. 
+ South Korea) were employed to measure the muscle activation during the gait in each experimental {condition}. Surface electrodes were attached to the tibialis anterior (TA) and medial gastrocnemius (MG) muscles, following the guidelines outlined in the Surface Electromyography for Non-Invasive Assessment of Muscles (SENIAM) protocol. The maximum voluntary contraction (MVC) for each lower limb muscle was measured before the experiment~\cite{Allison1993,Burden2010}. EMG data were collected using Matlab (R2023a, MathWorks Inc., Natick, MA, USA, Win10) and normalized based on the pre-measured MVC values. The raw EMG signals were low-pass filtered using a fourth-order Butterworth filter with a cutoff frequency of 6 Hz~\cite{Roger2007}.
+The gait cycles were segmented from 0\% to 100\% based on the heel-off event of the left foot, and gait data analysis was performed for each experimental condition and gait environment. To ensure reliable analysis, the first and last steps of the gait cycle, which did not accurately reflect the gait pattern and were unstable, were excluded from the data analysis.
+
+\section{Results}
+\subsection{{Real-Time Environment Classification Performance}}
+The real-time classification performance of the vision system was evaluated by classifying the gait environment through a camera mounted on the exosuit in the \textit{exo on} condition. Performance evaluation metrics are critical for assessing the effectiveness of classification system, categorizing predictions into true positive ($TP$), false positive ($FP$), false negative ($FN$), and true negative ($TN$) categories. The confusion matrices for the classification of gait environments by both the YOLO system and the YOLO-LSTM system, normalized to a range between 0 and 1, are illustrated in the upper part of Figure~\ref{vision system}. Additionally, Table~\ref{tab_vision} demonstrates the precision, recall, F1 score, and accuracy of each environment. 
+Precision measures the proportion of $TP$ predictions among all positive predictions, indicating the model's accuracy, defined as
+\begin{linenomath}
+\begin{equation}
+\begin{aligned}
+\text{$Precision = \frac{TP}{TP+FP}$} \\
+\end{aligned}
+\end{equation}
+\end{linenomath}
+
+Recall assesses the proportion of $TP$ predictions among all true positives, reflecting the model's ability to identify positive instances, denoted as
+\begin{linenomath}
+\begin{equation}
+\begin{aligned}
+\text{$Recall = \frac{TP}{TP+FN}$} \\
+\end{aligned}
+\end{equation}
+\end{linenomath}
+
+The F1 score provides a balanced evaluation by combining precision and recall, given by Equation (6). 
+Additionally, Accuracy measures the overall correctness of the model, defined as Equation (7), providing a general overview of performance. 
+\begin{linenomath}
+\begin{equation}
+\begin{aligned}
+\text{$F1score = \frac{2\times Precision \times Recall}{Precision+Recall}$}
+\end{aligned}
+\end{equation}
+\end{linenomath}
+
+\begin{linenomath}
+\begin{equation}
+\begin{aligned}
+\text{$Accuaracy = \frac{TP+TN}{TP+TN+FP+FN}$}
+\end{aligned}
+\end{equation}
+\end{linenomath}
+
+\begin{table}[H] 
+\caption{Environment classification performance.\label{tab_vision}}
+\renewcommand{\arraystretch}{1.5} % 셀 높이 1.5로 설정
+\begin{tabularx}{\textwidth}{CCCCCC}
+\toprule
+\textbf{Algorithm}&\textbf{Environment}&\textbf{Precision}&\textbf{Recall}&\textbf{F1 Score}&\textbf{Acurracy}\\
+\midrule
+\multirow[m]{7}{*}{YOLO}&$LG$	  & 0.923		& 0.923			& 0.923			& 0.923\\
+&$IC_{\text{prev}}$		         & 1.000		& 0.333			& 0.500			& 0.333\\
+&$IC$		                    & 0.923			& 1.000			& 0.960		    & 1.000\\
+&$IC_{\text{next}}$		        & 0.889			& 0.889			& 0.889			& 0.889\\
+&$DC_{\text{prev}}$	            & 1.000			& 0.333			& 0.500			& 0.333\\
+&$DC$		                    & 0.923			& 0.960			& 0.941			& 0.960\\
+&$DC_{\text{next}}$		        & 0.600			& 0.857			& 0.706			& 0.857\\
+\hline
+\multirow[m]{3}{*}{YOLO - LSTM}&$LG$	  & {0.954}			& {0.984}			& {0.969}			& {0.984}\\
+&$IC$	      & {0.972}			& {0.972}			&{0.972}			&{0.972}\\
+&$DC$		                     & {1.000}	   & {0.950}			& {0.974}			& {0.950}\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+
+The real-time performance evaluation metrics of the YOLO system identified instances of misclassification, {and the overall F1 score for the class was below 0.96}. Particularly, the system exhibited a significantly lower accuracy during the initial transition from the level ground to a stair environment. {Particularly, the precision values in the $IC_{\text{prev}}$ and $DC_{\text{prev}}$ was 1, while the recall value was notably lower at 0.333, indicating a significant imbalance. Consequently, the F1 score was 0.500, reflecting this deficiency. Additionally, in the $DC_{\text{next}}$ class, the precision, recall value, and F1 score were 0.600, 0.857, and 0.706, respectively, indicating a relatively low performance.}
+
+{Conversely}, the confusion matrix for the YOLO-LSTM system demonstrated a high accuracy for the incline and decline environments, with a reduction in the misclassifications. This vision system enhanced the performance, as demonstrated by the improved {precision, recall,} F1 scores, and accuracy for $LG$, $IC$, and $DC$, relative to YOLO alone. {Particularly, the F1 score of the overall class exceeded 0.96, indicating a balanced classification performance across the various class.}
+
+As shown in Figure~\ref{vision system}, this study analyzed the gait environment class labels across the time domain to evaluate the timing of the gait environment transitions during real-time classification. The YOLO environment classification results indicate that during the transitions from the level ground to the stairs, the system misclassified the level ground as stairs 1.5 s (6 frames) before the stair entry.
+In contrast, the YOLO-LSTM vision system rapidly distinguished environmental changes with appropriate timing during the transition phases. It identified transitions during the initial entry into the stairs in the descent phase ($DC_{\text{prev}}$), with a delay of one frame, or 0.25 s. Conversely, it detected the stair environment one frame earlier during the ascent ($IC_{\text{prev}}$, $IC_{\text{next}}$) and the switch from the stairs to the flat ground during the descent ($DC_{\text{next}}$).
+Additionally, the system accurately identified the environments during the stair ascent and descent, avoiding misclassification of the level ground and stair gait. %By leveraging the spatiotemporal features of LSTM-based gait environment data, the system achieved high accuracy in environmental recognition and promptly adapted to changes.
+
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{Figure/Figure 5.png}
+\caption{Evaluation metrics for the real-time gait environment classification vision system. (\textbf{A}) Confusion matrix for the seven gait environment classes ($LG$, $IC_{\text{prev}}$, $IC$, $IC_{\text{next}}$, $DC_{\text{prev}}$, $DC$, and $DC_{\text{next}}$) classified by the YOLO model. (\textbf{B}) Confusion matrix for the three gait environment classes ($LG$, $IC$, $DC$) classified by the YOLO-LSTM vision system.\label{vision system} (\textbf{C}) YOLO-based environment classification results over time to assess the transition timing during the real-time application. (\textbf{D}) Integrated vision-system-based environment {classification} results over time.}
+\end{figure}   %EE: Attention AE: Please edit "Real-time" to "Real-Time", edit "true" to "True", and edit "predicted" to "Predicted" (all twice).
+
+
+
+
+
+\subsection{Joint Kinematics}
+The average ankle joint angles for each experimental condition are illustrated in Figure ~\ref{joint angle}. On the level ground, the peak ankle dorsiflexion angles were $ 8.88 \pm 3.95^{\circ}$ (mean ± SD) in the \textit{no exo} condition, $ 6.74 \pm 2.08^{\circ}$  in the \textit{exo off} condition, and $ 27.13 \pm 5.71^{\circ}$ in the \textit{exo on} condition. This indicates a slight reduction in the dorsiflexion angle with the \textit{exo off} condition and a substantial increase with the \textit{exo on} condition. In the stair incline environment, the peak ankle joint angles were as follows: $7.92 \pm 1.48^{\circ}$  under the \textit{no exo} condition, $25.99 \pm 2.78^{\circ}$ under the exo off condition, and $21.06 \pm 2.08^{\circ}$ under the \textit{exo on} condition. These results show similar peak dorsiflexion angles between the \textit{exo off} and \textit{exo on} conditions. In the stair decline environment, the peak dorsiflexion angles were $9.14 \pm 2.27^{\circ}$ under the \textit{no exo} condition, $25.08 \pm 3.63^{\circ}$ under the \textit{exo off} condition, and $25.65 \pm 5.16^{\circ}$ under the \textit{exo on} condition, which demonstrated an increase in peak dorsiflexion angle with the application of the exosuit. The stair environments revealed similar peak ankle dorsiflexion angles between the \textit{exo off} and \textit{exo on} conditions.
+
+\begin{figure}[H]
+\begin{adjustwidth}{-\extralength}{0cm}
+\hspace*{\fill} 
+\includegraphics[width=18cm]{Figure/Figure 6.png}
+\end{adjustwidth}
+\caption{\hl{Ankle} %MDPI: Please change the hyphen (-) into a minus sign ($-$, "U+2212"). e.g., "-1" should be "$-$1".
+ joint angle for each gait environment, classified by the gait cycle. Positive values indicate dorsiflexion. The red line represents the \textit{no exo} condition, the green line indicates the \textit{exo off} condition, and the blue line denotes the \textit{exo on} condition. Ankle angle (\textbf{A}) in the level ground environment, (\textbf{B}) during the stair ascent, and (\textbf{C}) during the stair descent.\label{joint angle}}
+\end{figure}  %EE: Attention AE: Please edit "no exo" to "No exo", edit "exo off" to "Exo off", edit "exo on" to "Exo on", and edit "gait" to "Gait" (all three times).
+
+
+
+
+
+\subsection{Muscle Reduction}
+Muscle reduction was observed in both the TA and MG muscles in the \textit{exo on} condition. A paired \emph{t}-test was performed to analyze the EMG signals recorded during the experiment under three conditions: \textit{no exo}, \textit{exo off}, and \textit{exo on}. This analysis aimed to evaluate the impact of the exosuit on muscle activation during the gait cycle.
+The results of the TA muscle activation for each gait {environment} are presented in Figure~\ref{TA}. 
+On level ground, the average TA muscle activation for each condition was 20.63 ± 11.56\%, 12.77 ± 5.02\%, and 13.22 ± 3.43\% for the \textit{no exo}, \textit{exo off}, and \textit{exo on} conditions, respectively. {The paired \emph{t}-test revealed a significant reduction in the activation between the overall conditions: \textit{no exo} vs. \textit{exo off} (\emph{p} < 0.001, \mbox{95\% CI = 6.08,} 11.05), \textit{no exo} vs. \textit{exo on} (\emph{p} < 0.001, 95\% CI = $-$9.79, $-$5.03), and \textit{exo off} vs. \textit{exo on} \mbox{(\emph{p} = 0.04,} 95\% \mbox{CI = $-$2.34,} 0.03).}  This indicates similar reductions of 7.86 ± 13.98\% in the \textit{exo off} condition and 7.41 ± 11.89\% in the \textit{exo on} condition compared with the \textit{no exo} condition.
+
+ {In the stair incline environment, TA muscle activation indicated a significant reduction across the overall conditions: \textit{no exo} vs. \textit{exo off} (\emph{p} = 0.002, 95\% CI = 0.02, 6.40), \textit{no exo} vs. \textit{exo on} (\emph{p} < 0.001, 95\% CI = 2.23, 8.66), and \textit{exo off} vs. \textit{exo on} (\emph{p} < 0.001, 95\% CI = $-$11.45, $-$5.86).} Particularly, it decreased by 3.21 ± 9.92\% and 8.65 ± 7.07\% in the \textit{exo off} (15.24 ± 12.77\%) and \textit{exo on} (9.79 ± 10.12\%) conditions, respectively, compared with the \textit{no exo} condition (18.44 ± 9.92\%). 
+
+\begin{figure}[H]
+\begin{adjustwidth}{-\extralength}{0cm}\centering
+\includegraphics[width=16cm]{Figure/Figure 7.png}
+\end{adjustwidth}
+\caption{\hl{TA muscle} %MDPI: Please add the explanation for *, **, *** in the figure.
+ activation across the gait cycle for each gait environment. The red line indicates the \textit{no exo} condition, the green line represents the \textit{exo off} condition, and the blue line denotes the \textit{exo on} condition. TA muscle activation in the (\textbf{A}) level ground environment, (\textbf{B}) stair incline environment, and (\textbf{C}) stair decline environment. Range of TA muscle activation in the (\textbf{D}) level ground environment, (\textbf{E}) stair incline environment, and (\textbf{F}) stair decline environment. \label{TA}}
+\end{figure} %EE: Attention AE: Please edit "no exo" to "No exo", edit "exo off" to "Exo off", edit "exo on" to "Exo on" (all six times), and edit "gait" to "Gait" (three times).
+
+
+
+
+
+
+
+
+In the stair decline environment, the TA muscle activation showed similar values across the \textit{no exo} (10.75 ± 4.25\%), \textit{exo off} (12.34 ± 10.93\%), and \textit{exo on} (12.09 ± 4.81\%) conditions, with slight increases of 1.59 ± 11.19\% and 1.34 ± 7.10\% in the \textit{exo off} and \textit{exo on} conditions, respectively, compared with the \textit{no exo} condition {(\emph{p} = 0.007, 95\% CI = $-$5.06, $-$0.62; \emph{p} < 0.001, 95\% CI = 1.81, 3.98)}. {However, no statistically significant differences were observed between the \textit{exo off} and \textit{exo on} conditions (\emph{p} = 0.97, 95\% CI = $-$2.39, 2.28).}
+ 
+
+
+For the MG muscle, which is activated during plantarflexion, a significant reduction was observed in the level ground environment, with decreases of 3.01 ± 6.16\% and 3.64 ± 4.27\%, respectively, in the \textit{exo on} condition compared with the \textit{no exo} condition {(\emph{p} < 0.001, 95\% CI = $-$4.33, $-$1.68)} and \textit{exo off} condition {(\emph{p} < 0.001, 95\% CI = 2.81, 4.47)}, as illustrated in Figure~\ref{MG} (\textit{no exo}: 7.88 ± 6.61\%, \textit{exo off}: 8.51 ± 4.04\%, \textit{exo on}: 4.87 ± 1.21\%). {There was no statistically significant difference observed between the \textit{no exo} and \textit{exo off} conditions (\emph{p} = 0.31, 95\% CI = $-$2.16, 0.90).}
+
+
+
+
+
+
+Similarly, in the stair incline environment, the MG muscle activation decreased by \linebreak  {7.01 ± 9.70\%} and 5.96 ± 6.80\% in the \textit{exo on} conditions compared with the unworn exosuit condition {(\emph{p} < 0.001, 95\% CI = $-$8.79, $-$5.24)} and worn-but-unpowered exosuit condition \linebreak  {(\emph{p} < 0.001, 95\% CI = $-$4.73, 7.19)}, respectively (\textit{no exo}: 11.71 ± 8.83\%, \textit{exo off}: 10.66 ± 5.99\%, \textit{exo on}: 4.70 ± 1.69\%). {The EMG reduction observed between the \textit{no exo} and \textit{exo off} conditions was not statistically significant (\emph{p} = 0.15, 95\% CI = $-$1.05, 3.16).}
+
+In the stair decline environment, muscle reductions of 2.35 ± 6.49\% and 3.57 ± 4.51\% were observed in the \textit{exo off} and \textit{exo on} conditions, respectively (\textit{no exo}: 9.97 ± 7.35\%, \textit{exo off}: 7.62 ± 3.41\%, \textit{exo on}: 6.41 ± 2.19\%). {The results in the decline environment were statistically significant between the overall conditions: \textit{no exo} vs. \textit{exo off} (\emph{p} = 0.006, 95\% CI = 0.75, 3.95), \textit{no exo} vs. \textit{exo on} (\emph{p} < 0.001, 95\% CI = -5.08, $-$2.06), and \textit{exo off} vs. \textit{exo on} (\emph{p} = 0.04, 95\% \mbox{CI = $-$2.34,} 0.03).}
+
+\begin{figure}[H]
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\includegraphics[width=16cm]{Figure/Figure 8.png}
+\end{adjustwidth}
+\caption{\hl{MG muscle} %MDPI: Please add the explanation for **, *** in the figure.
+ activation throughout the gait cycle for each gait condition. The red line represents the \textit{no exo} condition, the green line denotes the \textit{exo off} condition, and the blue line signifies the \textit{exo on} condition. MG muscle activation is shown in the (\textbf{A}) level ground environment, (\textbf{B})~stair incline environment, and (\textbf{C}) stair decline environment. The range of MG muscle activation is detailed for the \hl{(\textbf{A})} %MDPI: please check if the last ``A-C'' should be ``D-F''
+ level ground environment, \hl{(\textbf{B})} %MDPI: 
+ stair incline environment, and \hl{(\textbf{C})} %MDPI: 
+ stair decline environment.\label{MG}}
+\end{figure}  %EE: Attention AE: Please edit "no exo" to "No exo", edit "exo off" to "Exo off", edit "exo on" to "Exo on" (all six times), and edit "gait" to "Gait" (three times).
+
+\section{Discussion}
+
+The vision system for the ankle exoskeleton developed in this study leverages YOLO's object classification capabilities and LSTM's temporal pattern recognition abilities to enable rapid responses to environmental changes. This system enhanced the precision, recall, F1 score, and accuracy compared with YOLO alone, and significantly improved the real-time environment transition timing.
+{In the initial transition from the level ground to a stair environment, the system utilizing YOLO alone displayed a notably low recall value and high precision value, indicating the system failed to identify a significant portion of actual instances within these classes, leading to a substantial imbalance in performance. In contrast, the $DC_{\text{next}}$ class with a low precision value suggests that while the system effectively identifies actual instances, it also incurs a substantial number of incorrect predictions.}
+
+{The YOLO-LSTM vision system offered substantial improvements over the YOLO alone, particularly in the decline environments. The improved precision, recall, and F1 scores for each class validated the effectiveness of the YOLO-LSTM approach in addressing the complexities of real-gait analysis. Overall, this indicates the system effectively identifies actual instances while minimizing the misclassification, reflecting the reliable and robust performance.}
+{In comparison with previous studies, which reported accuracies of 97.5\%, 85.5\%, and 91.1\% for various terrains, such as the level ground, stair incline, and decline environments, this research demonstrated improved performances, with accuracies of 98.4\%, 97.2\%, and 95.0\% for each condition~\cite{Tricomi2023}. This suggests that our method achieves high accuracy across various terrains, thereby improving the effectiveness in real-world applications. The advancements observed in the results may be attributed to the integration of a more sophisticated environmental recognition algorithm and the utilization of advanced deep learning techniques.}
+
+Although the system detected environmental changes in the transition phase with a timing variation of $\pm$1 frame ($\pm$0.25 s), this minor temporal discrepancy did not impact the overall exosuit performance. 
+In particular, when misclassifications occurred in the YOLO model predictions, the LSTM model compensated by analyzing the previous context and patterns based on sequence data to make accurate predictions. This capability underscores the critical role of spatio-temporal feature extraction in adaptive exoskeletons, emphasizing its importance in rapid and accurate responses to dynamic environmental changes, thereby enhancing the system adaptability and real-time performance.
+
+The analysis of the ankle joint angle variations revealed a significant increase in the ankle dorsiflexion angle during the \textit{exo on} condition on the level ground. An increased dorsiflexion angle can alleviate symptoms of foot drop in stroke patients and facilitate improved foot clearance during gait. In the stair environments, the ankle angle demonstrated notable improvements in the \textit{exo off} and \textit{exo on} conditions compared with the \textit{no exo} condition. {Furthermore}, similar ankle angles were observed whether the exosuit was in an unpowered or powered state. During the stair ascent, the exosuit reduced the TA and MG muscle activations by 5.44\% and 5.95\%, respectively, compared with the unpowered condition. This reduction indicates that the exosuit effectively supports ankle movements during stair climbing, reducing muscle activation while maintaining comparable ankle angles. In contrast, during the stair descent, the exosuit demonstrated similar muscle activation regardless of its powered state. The assistance control pattern during a stair descent may not directly influence muscle activation. Gravitational forces decrease the load on the ankle joint during a stair descent, which may naturally reduce muscle activation without the exosuit. Consequently, despite the additional assistance provided by the exosuit, no significant differences in muscle activation were observed.
+{The statistical analysis revealed that the TA muscle exhibited low statistical significance between the \textit{exo off} and \textit{exo on} conditions during the stair descent. Similarly, the MG muscle demonstrated low statistical significance between the \textit{no exo} and \textit{exo off} conditions on the level ground and during the stair ascent. These findings can be attributed to the experimental constraints, as this study was conducted in a limited environmental condition with a single participant, potentially contributing to the reduced significance in certain conditions. However, the TA muscle demonstrated high statistical significance between the \textit{no exo} and \textit{exo on} conditions during the stair descent, indicating a reliable reduction in the muscle activation due to the exosuit. Moreover, the MG muscle displayed high statistical significance between the \textit{exo on} and \textit{exo off} conditions, which further validated the performance of the exosuit.}
+
+Although the YOLO-LSTM system demonstrated an improved classification accuracy and response time, future work could explore the more advanced deep learning models or hybrid approaches. This could further refine the vision system's ability to predict complex environmental transitions, especially in highly dynamic environments. Additionally, we may focus on training the model with a more diverse dataset that includes various terrains, lighting conditions, and user profiles. This would enhance the system’s robustness and ensure consistent performance in a wide range of real-world scenarios. Furthermore, future work should focus on refining the system's ability to detect gait phases in real time, enabling more precise and context-specific control of the exosuit. {Moreover, future studies should incorporate trials involving a diverse cohort of subjects, particularly stroke patients exhibiting foot drop symptoms and characterized by varying the levels of stroke severity and motor capabilities to validate the effectiveness of the exosuit in real-world scenarios.}
+
+
+\section{Conclusions}
+This paper proposes a vision-based intelligent gait environment detection algorithm for an ankle exosuit aimed at stroke patients. By integrating YOLO's advanced object classification capabilities with LSTM for spatio-temporal pattern recognition, the proposed system significantly improves environmental recognition and response times. The analysis indicated that the exosuit substantially increased the ankle dorsiflexion angles during level ground walking, which can mitigate foot drop symptoms and enhance foot clearance for stroke patients. During the stair ascent, the exosuit reduced the TA and MG muscle activation, demonstrating its capacity to support ankle movements while maintaining similar angles. Overall, the findings highlight the critical role of spatio-temporal feature extraction in enhancing the performance of adaptive exoskeletons. The integration of YOLO and LSTM in the vision system provides robust environmental recognition and response capabilities, making significant strides in improving gait stability and safety for individuals with foot drop. Future work should focus on validating these results in diverse real-world scenarios and with multiple subjects, particularly stroke patients, to further establish the exosuit's effectiveness and generalization ability. 
+
+{This approach establishes a framework for future developments in robotic rehabilitation technologies, emphasizing the importance of real-time environmental awareness in improving user outcomes. It advances the understanding of adaptive exoskeleton design through the integration of YOLO’s object classification capabilities with LSTM’s temporal pattern recognition. Furthermore, by demonstrating the effects of the exosuit on ankle dorsiflexion and muscle activation during various gait scenarios, this work provides new insights into advancing robotic interventions for stroke patients, thereby informing future designs and applications in therapeutic robotics.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Patents}
+
+%This section is not mandatory, but may be added if there are patents resulting from the work reported %in this manuscript.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{6pt} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% optional
+%\supplementary{The following supporting information can be downloaded at:  \linksupplementary{s1}, Figure S1: title; Table S1: title; Video S1: title.}
+
+% Only for journal Methods and Protocols:
+% If you wish to submit a video article, please do so with any other supplementary material.
+% \supplementary{The following supporting information can be downloaded at: \linksupplementary{s1}, Figure S1: title; Table S1: title; Video S1: title. A supporting video article is available at doi: link.}
+
+% Only for journal Hardware:
+% If you wish to submit a video article, please do so with any other supplementary material.
+% \supplementary{The following supporting information can be downloaded at: \linksupplementary{s1}, Figure S1: title; Table S1: title; Video S1: title.\vspace{6pt}\\
+%\begin{tabularx}{\textwidth}{lll}
+%\toprule
+%\textbf{Name} & \textbf{Type} & \textbf{Description} \\
+%\midrule
+%S1 & Python script (.py) & Script of python source code used in XX \\
+%S2 & Text (.txt) & Script of modelling code used to make Figure X \\
+%S3 & Text (.txt) & Raw data from experiment X \\
+%S4 & Video (.mp4) & Video demonstrating the hardware in use \\
+%... & ... & ... \\
+%\bottomrule
+%\end{tabularx}
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\authorcontributions{Conceptualization, G.Y. and B.B.K.; methodology, G.Y.; software, G.Y. and J.H.; validation, G.Y. and J.H.; investigation, G.Y.; resources, G.Y.; data curation, G.Y.; writing---original draft preparation, G.Y. and J.H.; writing---review and editing, G.Y. and B.B.K.; visualization, G.Y.; supervision, B.B.K.; project administration, B.B.K.; funding acquisition, B.B.K. All authors read and agreed to the published version of this manuscript
+}
+%'', please turn to the  \href{http://img.mdpi.org/data/contributor-role-instruction.pdf}{CRediT taxonomy} for the term explanation. Authorship must be limited to those who have contributed substantially to the work~reported.}
+
+\funding{\hl{This research was funded by the Translational Research Program for Rehabilitation Robots (NRCTR-EX22008), National Rehabilitation Center, Ministry of Health and Welfare, Korea.} %MDPI: Duplicate content in the Acknowledgments and the Funding section we removed  Acknowledgments part, please confirm
+}
+%\institutionalreview{Not applicable}
+
+%\informedconsent{
+%Informed consent was obtained from the subject involved in the study. 
+%Written informed consent has been obtained from the patient.
+%환자가 참여하는 경우에만 기재?- healthy participants 인 경우, 기재되어 있지 않음.
+
+%Any research article describing a study involving humans should contain this statement. Please add ``Informed consent was obtained from all subjects involved in the study.'' OR ``Patient consent was waived due to REASON (please provide a detailed justification).'' OR ``Not applicable'' for studies not involving humans. You might also choose to exclude this statement if the study did not involve humans.
+
+%Written informed consent for publication must be obtained from participating patients who can be identified (including by the patients themselves). Please state ``Written informed consent has been obtained from the patient(s) to publish this paper'' if applicable.}
+
+\dataavailability{
+\hl{Data are contained within the article.} %MDPI: "Not applicable" is only used for review papers or articles for which no new data were created. Normally, the DAS for research articles can state "Data are contained within the article." or "Data are contained within the article and supplementary materials." Please refer to the complete guideline at https://www.mdpi.com/ethics#_bookmark21
+} 
+
+% Only for journal Nursing Reports
+%\publicinvolvement{Please describe how the public (patients, consumers, carers) were involved in the research. Consider reporting against the GRIPP2 (Guidance for Reporting Involvement of Patients and the Public) checklist. If the public were not involved in any aspect of the research add: ``No public involvement in any aspect of this research''.}
+
+% Only for journal Nursing Reports
+%\guidelinesstandards{Please add a statement indicating which reporting guideline was used when drafting the report. For example, ``This manuscript was drafted against the XXX (the full name of reporting guidelines and citation) for XXX (type of research) research''. A complete list of reporting guidelines can be accessed via the equator network: \url{https://www.equator-network.org/}.}
+
+% Only for journal Nursing Reports
+%\useofartificialintelligence{Please describe in detail any and all uses of artificial intelligence (AI) or AI-assisted tools used in the preparation of the manuscript. This may include, but is not limited to, language translation, language editing and grammar, or generating text. Alternatively, please state that “AI or AI-assisted tools were not used in drafting any aspect of this manuscript”.}
+
+%\acknowledgments{\hl{This study was supported by the Translational Research Program for Rehabilitation Robots (NRCTR-EX22008), National Rehabilitation Center, Ministry of Health and Welfare, Korea}.}
+
+\conflictsofinterest{The authors declare no conflicts of interest.}
+%Declare conflicts of interest or state ``The authors declare no conflicts of interest.'' Authors must identify and declare any personal circumstances or interest that may be perceived as inappropriately influencing the representation or interpretation of reported research results. Any role of the funders in the design of the study; in the collection, analyses or interpretation of data; in the writing of the manuscript; or in the decision to publish the results must be declared in this section. If there is no role, please state ``The funders had no role in the design of the study; in the collection, analyses, or interpretation of data; in the writing of the manuscript; or in the decision to publish the results''.} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optional
+
+%% Only for journal Encyclopedia
+%\entrylink{The Link to this entry published on the encyclopedia platform.}
+
+%\abbreviations{Abbreviations}{
+%The following abbreviations are used in this manuscript:\\
+
+%\noindent 
+%\begin{tabular}{@{}ll}
+%MDPI & Multidisciplinary Digital Publishing Institute\\
+%DOAJ & Directory of open access journals\\
+%TLA & Three letter acronym\\
+%LD & Linear dichroism
+%\end{tabular}
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optional
+%\appendixtitles{no} % Leave argument "no" if all appendix headings stay EMPTY (then no dot is printed after "Appendix A"). If the appendix sections contain a heading then change the argument to "yes".
+%\appendixstart
+%\appendix
+%\section[\appendixname~\thesection]{}
+%\subsection[\appendixname~\thesubsection]{}
+%The appendix is an optional section that can contain details and data supplemental to the main text---for example, explanations of experimental details that would disrupt the flow of the main text but nonetheless remain crucial to understanding and reproducing the research shown; figures of replicates for experiments of which representative data are shown in the main text can be added here if brief, or as Supplementary Data. Mathematical proofs of results not central to the paper can be added as an appendix.
+
+
+
+%\section[\appendixname~\thesection]{}
+%All appendix sections must be cited in the main text. In the appendices, Figures, Tables, etc. should be labeled, starting with ``A''---e.g., Figure A1, Figure A2, etc.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{adjustwidth}{-\extralength}{0cm}
+%\printendnotes[custom] % Un-comment to print a list of endnotes
+
+\reftitle{References}
+
+% Please provide either the correct journal abbreviation (e.g. according to the “List of Title Word Abbreviations” http://www.issn.org/services/online-services/access-to-the-ltwa/) or the full name of the journal.
+% Citations and References in Supplementary files are permitted provided that they also appear in the reference list here. 
+
+%=====================================
+% References, variant A: external bibliography
+%=====================================
+%\bibliography{your_external_BibTeX_file}
+
+%=====================================
+% References, variant B: internal bibliography
+%=====================================
+%~\cite{woolley2001}
+
+
+\begin{thebibliography}{999}
+
+\bibitem[Winstein et~al.(2016)Winstein, Stein, Arena, Bates, Cherney, Cramer,
+  Deruyter, Eng, Fisher, Harvey, Lang, MacKay-Lyons, Ottenbacher, Pugh, Reeves,
+  Richards, Stiers, and Zorowitz]{Carolee2016}
+Winstein, C.J.; Stein, J.; Arena, R.; Bates, B.; Cherney, L.R.; Cramer, S.C.;
+  Deruyter, F.; Eng, J.J.; Fisher, B.; Harvey, R.L.;  et~al.
+\newblock Guidelines for Adult Stroke Rehabilitation and Recovery.
+\newblock {\em Stroke} {\bf 2016}, {\em 47},~e98--e169.
+\newblock {\url{https://doi.org/10.1161/STR.0000000000000098}}.
+
+\bibitem[Perry et~al.(1995)Perry, Garrett, Gronley, and Mulroy]{Perry1995}
+Perry, J.; Garrett, M.; Gronley, J.; Mulroy, S.
+\newblock Classification of Walking Handicap in the Stroke Population.
+\newblock {\em \hl{Stroke} %MDPI: please confirm the revision, same with all highlighted.
+} {\bf 1995}, {\em
+  26},~982--989.
+\newblock {\url{https://doi.org/10.1161/01.STR.26.6.982}}.
+
+\bibitem[Bohannon(2007)]{Bohannon2007}
+Bohannon, R.
+\newblock Muscle strength and muscle training after stroke.
+\newblock {\em \hl{J. Rehabil. Med.} %MDPI: 
+} {\bf 2007}, {\em
+  39},~14--20.
+\newblock {\url{https://doi.org/10.2340/16501977-0018}}.
+
+\bibitem[Woolley(2001)]{woolley2001}
+Woolley, S.M.
+\newblock Characteristics of gait in hemiplegia.
+\newblock {\em Top. Stroke Rehabil.} {\bf 2001}, {\em 7},~1--18.
+
+\bibitem[Olney and Richards(1996)]{Sandra1996}
+Olney, S.J.; Richards, C.
+\newblock Hemiparetic gait following stroke. Part I: Characteristics.
+\newblock {\em Gait Posture} {\bf 1996}, {\em 4},~136--148.
+\newblock {\url{https://doi.org/10.1016/0966-6362(96)01063-6}}.
+
+\bibitem[Balaban and Tok(2014)]{Balaban2014}
+Balaban, B.; Tok, F.
+\newblock Gait Disturbances in Patients With Stroke.
+\newblock {\em \hl{PM \& R}} %MDPI: 
+  {\bf 2014}, {\em 6}, \hl{635--642.} %MDPI: Newly added  information. Please confirm.
+\newblock {\url{https://doi.org/10.1016/j.pmrj.2013.12.017}}.
+
+\bibitem[Ramsay et~al.(2014)Ramsay, Wessel, Buchanan, and
+  Higginson]{Ramsay2014}
+Ramsay, J.W.; Wessel, M.A.; Buchanan, T.S.; Higginson, J.S.
+\newblock Poststroke muscle architectural parameters of the tibialis anterior
+  and the potential implications for rehabilitation of foot drop.
+\newblock {\em Stroke Res. Treat.} {\bf 2014}, {\em 2014},~948475.
+
+\bibitem[Moseley et~al.(1993)Moseley, Wales, Herbert, Schurr, and
+  Moore]{Moseley1993}
+Moseley, A.; Wales, A.; Herbert, R.; Schurr, K.; Moore, S.
+\newblock Observation and analysis of hemiplegic gait: Stance phase.
+\newblock {\em Aust. J. Physiother.} {\bf 1993}, {\em
+  39},~259--267.
+
+\bibitem[Chen et~al.(2005)Chen, Patten, Kothari, and Zajac]{Chen2005}
+Chen, G.; Patten, C.; Kothari, D.H.; Zajac, F.E.
+\newblock Gait differences between individuals with post-stroke hemiparesis and
+  non-disabled controls at matched speeds.
+\newblock {\em Gait Posture} {\bf 2005}, {\em 22},~51--56.
+
+\bibitem[Li et~al.(2018)Li, Francisco, and Zhou]{Li2018}
+Li, S.; Francisco, G.E.; Zhou, P.
+\newblock Post-stroke hemiplegic gait: New perspective and insights.
+\newblock {\em Front. Physiol.} {\bf 2018}, {\em 9},~1021.
+
+\bibitem[Moosabhoy and Gard(2006)]{Mufadal2006}
+Moosabhoy, M.A.; Gard, S.A.
+\newblock Methodology for determining the sensitivity of swing leg toe
+  clearance and leg length to swing leg joint angles during gait.
+\newblock {\em Gait Posture} {\bf 2006}, {\em 24},~493--501.
+\newblock
+  {\url{https://doi.org/https://doi.org/10.1016/j.gaitpost.2005.12.004}}.
+
+\bibitem[Roche et~al.(2015)Roche, Bonnyaud, Geiger, Bussel, and
+  Bensmail]{Roche2015}
+Roche, N.; Bonnyaud, C.; Geiger, M.; Bussel, B.; Bensmail, D.
+\newblock Relationship between hip flexion and ankle dorsiflexion during swing
+  phase in chronic stroke patients.
+\newblock {\em Clin. Biomech.} {\bf 2015}, {\em 30},~219--225.
+
+\bibitem[Agha et~al.(2021)Agha, Levine, and Novak]{Agha2021}
+Agha, S.; Levine, I.C.; Novak, A.C.
+\newblock Determining the effect of stair nosing shape on foot trajectory
+  during stair ambulation in healthy and post-stroke individuals.
+\newblock {\em Appl. Ergon.} {\bf 2021}, {\em 91},~103304.
+
+\bibitem[Andriacchi et~al.(1980)Andriacchi, Andersson, Fermier, Stern, and
+  Galante]{Andriacchi1980}
+Andriacchi, T.; Andersson, G.; Fermier, R.; Stern, D.; Galante, J.
+\newblock A study of lower-limb mechanics during stair-climbing.
+\newblock {\em JBJS} {\bf 1980}, {\em 62},~749--757.
+
+\bibitem[Jacobs(2016)]{Jacobs2016}
+Jacobs, J.V.
+\newblock A review of stairway falls and stair negotiation: Lessons learned and
+  future needs to reduce injury.
+\newblock {\em Gait Posture} {\bf 2016}, {\em 49},~159--167.
+
+\bibitem[Novak and Brouwer(2012)]{Novak2012}
+Novak, A.C.; Brouwer, B.
+\newblock Strength and aerobic requirements during stair ambulation in persons
+  with chronic stroke and healthy adults.
+\newblock {\em Arch. Phys. Med. Rehabil.} {\bf 2012},
+  {\em 93},~683--689.
+
+\bibitem[Hsu et~al.(2021)Hsu, Changcheng, Lee, and Chen]{Hsu2021}
+Hsu, S.H.; Changcheng, C.; Lee, H.J.; Chen, C.T.
+\newblock Design and implementation of a robotic hip exoskeleton for gait
+  rehabilitation.
+\newblock \emph{Actuators}  \textbf{2021}, \emph{10},  212.
+
+\bibitem[Lee et~al.(2022)Lee, Park, Hong, and Kang]{Lee2022}
+Lee, H.D.; Park, H.; Hong, D.H.; Kang, T.H.
+\newblock Development of a series elastic tendon actuator (SETA) based on gait
+  analysis for a knee assistive exosuit.
+\newblock  \emph{Actuators} \textbf{2022}, \emph{11},  166.
+
+\bibitem[Bishe et~al.(2021)Bishe, Nguyen, Fang, and Lerner]{Bishe2021}
+Bishe, S.S.P.A.; Nguyen, T.; Fang, Y.; Lerner, Z.F.
+\newblock Adaptive ankle exoskeleton control: Validation across diverse walking
+  conditions.
+\newblock {\em IEEE Trans. Med. Robot. Bionics} {\bf 2021},
+  {\em 3},~801--812.
+
+\bibitem[Xu et~al.(2023)Xu, Li, Chen, Chen, Wang, Yang, Liu, and Wu]{Xu2023}
+Xu, Y.; Li, W.; Chen, C.; Chen, S.; Wang, Z.; Yang, F.; Liu, Y.; Wu, X.
+\newblock A Portable Soft Exosuit to Assist Stair Climbing with Hip Flexion.
+\newblock {\em Electronics} {\bf 2023}, {\em 12},~2467.
+
+\bibitem[Fang et~al.(2021)Fang, Orekhov, and Lerner]{Fang2021}
+Fang, Y.; Orekhov, G.; Lerner, Z.F.
+\newblock Improving the energy cost of incline walking and stair ascent with
+  ankle exoskeleton assistance in cerebral palsy.
+\newblock {\em IEEE Trans. Biomed. Eng.} {\bf 2021}, {\em
+  69},~2143--2152.
+
+\bibitem[Lee et~al.(2020)Lee, Park, Seongho, and Kang]{Lee2020}
+Lee, H.D.; Park, H.; Seongho, B.; Kang, T.H.
+\newblock Development of a soft exosuit system for walking assistance during
+  stair ascent and descent.
+\newblock {\em Int. J. Control. Autom. Syst.} {\bf
+  2020}, {\em 18},~2678--2686.
+
+\bibitem[Han et~al.(2019)Han, Wong, and Murray]{Han2019}
+Han, Y.C.; Wong, K.I.; Murray, I.
+\newblock Gait phase detection for normal and abnormal gaits using IMU.
+\newblock {\em IEEE Sens. J.} {\bf 2019}, {\em 19},~3439--3448.
+
+\bibitem[Pappas et~al.(2001)Pappas, Popovic, Keller, Dietz, and
+  Morari]{Pappas2001}
+Pappas, I.P.; Popovic, M.R.; Keller, T.; Dietz, V.; Morari, M.
+\newblock A reliable gait phase detection system.
+\newblock {\em IEEE Trans. Neural Syst. Rehabil. Eng.} {\bf 2001}, {\em 9},~113--125.
+
+\bibitem[Liu et~al.(2019)Liu, Xu, Chen, Long, Tao, and Wu]{Liu2019}
+Liu, D.X.; Xu, J.; Chen, C.; Long, X.; Tao, D.; Wu, X.
+\newblock Vision-assisted autonomous lower-limb exoskeleton robot.
+\newblock {\em IEEE Trans. Syst. Man Cybern. Syst.}
+  {\bf 2019}, {\em 51},~3759--3770.
+
+\bibitem[Yang et~al.(2023)Yang, Chen, Wang, Chen, Liu, Li, and Wu]{Yang2023}
+Yang, F.; Chen, C.; Wang, Z.; Chen, H.; Liu, Y.; Li, G.; Wu, X.
+\newblock Vit-based terrain recognition system for wearable soft exosuit.
+\newblock {\em Biomim. Intell. Robot.} {\bf 2023}, {\em
+  3},~100087.
+
+\bibitem[Templer(1995)]{Templer1995}
+Templer, J.
+\newblock {\em The Staircase: Studies of Hazards, Falls, and Safer Design};
+   MIT Press:  \hl{Cambridge, MA, USA,} %We added the location of publisher. Please confirm
+   1995; Volume~2.
+
+\bibitem[Coleman et~al.(2004)Coleman, Stone, Ewing, Nevitt, Cummings, Cauley,
+  Ensrud, Harris, Hochberg, and Mangione]{Coleman2004}
+Coleman, A.L.; Stone, K.; Ewing, S.K.; Nevitt, M.; Cummings, S.; Cauley, J.A.;
+  Ensrud, K.E.; Harris, E.L.; Hochberg, M.C.; Mangione, C.M.
+\newblock Higher risk of multiple falls among elderly women who lose visual
+  acuity.
+\newblock {\em Ophthalmology} {\bf 2004}, {\em 111},~857--862.
+
+\bibitem[Coser et~al.(2024)Coser, Tamantini, Soda, and Zollo]{Coser2024}
+Coser, O.; Tamantini, C.; Soda, P.; Zollo, L.
+\newblock AI-based methodologies for exoskeleton-assisted rehabilitation of the
+  lower limb: A review.
+\newblock {\em Front. Robot.  AI} {\bf 2024}, {\em 11},~1341580.
+
+\bibitem[Zhao et~al.(2023)Zhao, Zhou, Li, Tang, Wang, Hou, Min, Zhang, Zhang,
+  Dong, et~al.]{Zhao2023}
+Zhao, W.X.; Zhou, K.; Li, J.; Tang, T.; Wang, X.; Hou, Y.; Min, Y.; Zhang, B.;
+  Zhang, J.; Dong, Z.;  et~al.
+\newblock A survey of large language models.
+\newblock {\em arXiv}  {\bf 2023}, arXiv:2303.18223.
+
+\bibitem[Zhang et~al.(2023)Zhang, Chen, Li, Peng, and Mao]{Zhang2023}
+Zhang, C.; Chen, J.; Li, J.; Peng, Y.; Mao, Z.
+\newblock Large language models for human-robot interaction: A review.
+\newblock {\em Biomim. Intell. Robot.} {\bf 2023}, p. 100131.
+
+\bibitem[Liu et~al.(2024)Liu, Wang, Vaidya, Ruehle, Halverson,
+  Solja{\v{c}}i{\'c}, Hou, and Tegmark]{Liu2024}
+Liu, Z.; Wang, Y.; Vaidya, S.; Ruehle, F.; Halverson, J.; Solja{\v{c}}i{\'c},
+  M.; Hou, T.Y.; Tegmark, M.
+\newblock Kan: Kolmogorov-arnold networks.
+\newblock {\em arXiv}  {\bf 2024},  arXiv:2404.19756.
+
+\bibitem[Cheon(2024)]{Cheon2024}
+Cheon, M.
+\newblock Demonstrating the efficacy of kolmogorov-arnold networks in vision
+  tasks.
+\newblock {\em arXiv } {\bf 2024},  arXiv:2406.14916.
+
+\bibitem[Sohan et~al.(2024)Sohan, Sai~Ram, Reddy, and Venkata]{Sohan2024}
+Sohan, M.; Sai~Ram, T.; Reddy, R.; Venkata, C.
+\newblock A review on yolov8 and its advancements.
+\newblock \hl{In} \emph{\hl{Data Intelligence and Cognitive Informatics}}; %MDPI: Please confirm changed title and addded book format or please add name of conference, location and  date of the conference.
+ Springer:  \hl{Berlin/Heidelberg, Germany,} %We added the location of publisher. Please confirm
+  2024; pp. 529--545.
+
+\bibitem[Hussain(2023)]{Hussain2023}
+Hussain, M.
+\newblock YOLO-v1 to YOLO-v8, the rise of YOLO and its complementary nature
+  toward digital manufacturing and industrial defect detection.
+\newblock {\em Machines} {\bf 2023}, {\em 11},~677.
+
+\bibitem[Tricomi et~al.(2023)Tricomi, Mossini, Missiroli, Lotti, Zhang,
+  Xiloyannis, Roveda, and Masia]{Tricomi2023}
+Tricomi, E.; Mossini, M.; Missiroli, F.; Lotti, N.; Zhang, X.; Xiloyannis, M.;
+  Roveda, L.; Masia, L.
+\newblock Environment-based assistance modulation for a hip exosuit via
+  computer vision.
+\newblock {\em IEEE Robot. Autom. Lett.} {\bf 2023}, {\em
+  8},~2550--2557.
+
+\bibitem[Ogihara et~al.(2020)Ogihara, Tsushima, Kamo, Sato, Matsushima, Niioka,
+  Asahi, and Azami]{Ogihara2020}
+Ogihara, H.; Tsushima, E.; Kamo, T.; Sato, T.; Matsushima, A.; Niioka, Y.;
+  Asahi, R.; Azami, M.
+\newblock Kinematic gait asymmetry assessment using joint angle data in
+  patients with chronic stroke—A normalized cross-correlation approach.
+\newblock {\em Gait Posture} {\bf 2020}, {\em 80},~168--173.
+
+\bibitem[Archea et~al.(1979)Archea, Collins, and Stahl]{Archea1979}
+Archea, J.; Collins, B.L.; Stahl, F.I.
+\newblock {\em Guidelines for Stair Safety};  \hl{The Bureau:   } %MDPI: Please add the location of the publisher (City and Country).
+1979; Number 120.
+
+\bibitem[Inman et~al.(1953)Inman, Eberhart, et~al.]{Inman1953}
+Inman, V.T.; Eberhart, H.D.
+\newblock The major determinants in normal and pathological gait.
+\newblock {\em JBJS} {\bf 1953}, {\em 35},~543--558.
+
+\bibitem[Shorter et~al.(2012)Shorter, Li, Bretl, and
+  Hsiao-Wecksler]{Shorter2012}
+Shorter, K.A.; Li, Y.; Bretl, T.; Hsiao-Wecksler, E.T.
+\newblock Modeling, control, and analysis of a robotic assist device.
+\newblock {\em Mechatronics} {\bf 2012}, {\em 22},~1067--1077.
+
+\bibitem[Whittle(2014)]{Whittle2014}
+Whittle, M.W.
+\newblock {\em Gait Analysis: An Introduction}; Butterworth-Heinemann: \hl{Oxford, UK,} %MDPI: Newly added  information. Please confirm.
+  2014.
+
+\bibitem[Karekla and Tyler(2018)]{Karekla2018}
+Karekla, X.; Tyler, N.
+\newblock Maintaining balance on a moving bus: The importance of three-peak
+  steps whilst climbing stairs.
+\newblock {\em Transp. Res. Part Policy Pract.} {\bf 2018},
+  {\em 116},~339--349.
+
+\bibitem[Welch et~al.(1995)Welch, Bishop, et~al.]{Welch1995}
+Welch, G.; Bishop, G.;  \hl{et~al.} %MDPI: Please include the first ten authors' names before using "et al." in the references.
+\newblock \emph{An Introduction to the Kalman Filter}; \hl{ACM: New York, NY, USA}, \hl{{1995}.} 
+
+
+\bibitem[Winter(2009)]{Winter2009}
+Winter, D.A.
+\newblock {\em Biomechanics and Motor Control of Human Movement}; John wiley \&
+  sons:  \hl{Hoboken, NJ, USA,} %We added the location of publisher. Please confirm
+  2009.
+
+\bibitem[Zeng and Zhao(2011)]{Zeng2011}
+Zeng, H.; Zhao, Y.
+\newblock Sensing movement: Microsensors for body motion measurement.
+\newblock {\em Sensors} {\bf 2011}, {\em 11},~638--660.
+
+\bibitem[Redmon et~al.(2016)Redmon, Divvala, Girshick, and Farhadi]{Redmon2016}
+Redmon, J.; Divvala, S.; Girshick, R.; Farhadi, A.
+\newblock You only look once: Unified, real-time object detection.
+\newblock In Proceedings of the  IEEE Conference on Computer
+  Vision and Pattern Recognition,\hl{ Las Vegas, NV, USA, 27--30 June } %MDPI: Newly added  information. Please confirm.
+  2016; pp. 779--788.
+
+\bibitem[Terven et~al.(2023)Terven, C{\'o}rdova-Esparza, and
+  Romero-Gonz{\'a}lez]{Terven2023}
+Terven, J.; C{\'o}rdova-Esparza, D.M.; Romero-Gonz{\'a}lez, J.A.
+\newblock A comprehensive review of yolo architectures in computer vision: From
+  yolov1 to yolov8 and yolo-nas.
+\newblock {\em Mach. Learn. Knowl. Extr.} {\bf 2023}, {\em
+  5},~1680--1716.
+
+\bibitem[Graves and Graves(2012)]{Graves2012}
+Graves, A.; Graves, A.
+\newblock Long short-term memory.
+\newblock {\em Supervised Sequence Labelling with Recurrent Neural Networks}; 
+  \hl{ 2012;} %MDPI: Please add the name of the publisher and their location.
+ pp. 37--45.
+
+\bibitem[Allison et~al.(1993)Allison, Marshall, and Singer]{Allison1993}
+Allison, G.; Marshall, R.; Singer, K.
+\newblock EMG signal amplitude normalization technique in stretch-shortening
+  cycle movements.
+\newblock {\em J. Electromyogr. Kinesiol.} {\bf 1993}, {\em
+  3},~236--244.
+
+\bibitem[Burden(2010)]{Burden2010}
+Burden, A.
+\newblock How should we normalize electromyograms obtained from healthy
+  participants? What we have learned from over 25 years of research.
+\newblock {\em J. Electromyogr. Kinesiol.} {\bf 2010}, {\em
+  20},~1023--1035.
+
+\bibitem[Mello et~al.(2007)Mello, Oliveira, and Nadal]{Roger2007}
+Mello, R.G.; Oliveira, L.F.; Nadal, J.
+\newblock Digital Butterworth filter for subtracting noise from low magnitude
+  surface electromyogram.
+\newblock {\em Comput. Methods Programs Biomed.} {\bf 2007}, {\em
+  87},~28--35.
+\newblock {\url{https://doi.org/https://doi.org/10.1016/j.cmpb.2007.04.004}}.
+
+\end{thebibliography}
+
+
+
+%\begin{thebibliography}{999}
+
+% Reference 1
+%\bibitem[Woolley, S.M(2001)]{ref-journal1}
+%Woolley, S.M. Characteristics of gait in hemiplegia. {\em Top. Stroke Rehabil.} {\bf 2001}, {\em 7}, 1-18.
+% Reference 2
+%\bibitem[Author2(year)]{ref-book1}
+%Author~2, L. The title of the cited contribution. In {\em The Book Title}; Editor 1, F., Editor 2, A., Eds.; Publishing House: City, Country, 2007; pp. 32--58.
+% Reference 3
+%\bibitem[Author3(year)]{ref-book2}
+%Author 1, A.; Author 2, B. \textit{Book Title}, 3rd ed.; Publisher: Publisher Location, Country, 2008; pp. 154--196.
+% Reference 4
+%\bibitem[Author4(year)]{ref-unpublish}
+%Author 1, A.B.; Author 2, C. Title of Unpublished Work. \textit{Abbreviated Journal Name} year, \textit{phrase indicating stage of publication (submitted; accepted; in press)}.
+% Reference 5
+%\bibitem[Author5(year)]{ref-communication}
+%Author 1, A.B. (University, City, State, Country); Author 2, C. (Institute, City, State, Country). Personal communication, 2012.
+% Reference 6
+%\bibitem[Author6(year)]{ref-proceeding}
+%Author 1, A.B.; Author 2, C.D.; Author 3, E.F. Title of presentation. In Proceedings of the Name of the Conference, Location of Conference, Country, Date of Conference (Day Month Year); Abstract Number (optional), Pagination (optional).
+% Reference 7
+%\bibitem[Author7(year)]{ref-thesis}
+%Author 1, A.B. Title of Thesis. Level of Thesis, Degree-Granting University, Location of University, Date of Completion.
+% Reference 8
+%\bibitem[Author8(year)]{ref-url}
+%Title of Site. Available online: URL (accessed on Day Month Year).
+%\end{thebibliography}
+
+% If authors have biography, please use the format below
+%\section*{Short Biography of Authors}
+%\bio
+%{\raisebox{-0.35cm}{\includegraphics[width=3.5cm,height=5.3cm,clip,keepaspectratio]{Definitions/author1.pdf}}}
+%{\textbf{Firstname Lastname} Biography of first author}
+%
+%\bio
+%{\raisebox{-0.35cm}{\includegraphics[width=3.5cm,height=5.3cm,clip,keepaspectratio]{Definitions/author2.jpg}}}
+%{\textbf{Firstname Lastname} Biography of second author}
+
+% For the MDPI journals use author-date citation, please follow the formatting guidelines on http://www.mdpi.com/authors/references
+% To cite two works by the same author: \citeauthor{ref-journal-1a} (\citeyear{ref-journal-1a}, \citeyear{ref-journal-1b}). This produces: Whittaker (1967, 1975)
+% To cite two works by the same author with specific pages: \citeauthor{ref-journal-3a} (\citeyear{ref-journal-3a}, p. 328; \citeyear{ref-journal-3b}, p.475). This produces: Wong (1999, p. 328; 2000, p. 475)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% for journal Sci
+%\reviewreports{\\
+%Reviewer 1 comments and authors’ response\\
+%Reviewer 2 comments and authors’ response\\
+%Reviewer 3 comments and authors’ response
+%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\PublishersNote{}
+\end{adjustwidth}
+\end{document}
+

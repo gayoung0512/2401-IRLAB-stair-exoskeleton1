@@ -1,0 +1,37 @@
+[34m[1mAMP: [39m[22mrunning Automatic Mixed Precision (AMP) checks with YOLOv8n...
+[34m[1mAMP: [39m[22mchecks passed ✅
+WARNING ⚠️ updating to 'imgsz=960'. 'train' and 'val' imgsz must be an integer, while 'predict' and 'export' imgsz may be a [h, w] list or an integer, i.e. 'yolo export imgsz=640,480' or 'yolo export imgsz=640'
+[34m[1mtrain: [39m[22mScanning D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\dataset\train... 16000 images, 0 corrupt: 100%|██████████| 16000/16000 [00:00<?, ?it/s]
+[34m[1mval: [39m[22mScanning D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\dataset\val... 2000 images, 0 corrupt: 100%|██████████| 2000/2000 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\train.py", line 27, in <module>
+    train()
+  File "D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\train.py", line 20, in train
+    results = model.train(data=dir_path+'/dataset', epochs=100, imgsz=[960,540], rect=True,optimizer='adam',batch=16, lr0=0.001,device=0)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\model.py", line 338, in train
+    self.trainer.train()
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\trainer.py", line 190, in train
+    self._do_train(world_size)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\trainer.py", line 286, in _do_train
+    self._setup_train(world_size)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\trainer.py", line 265, in _setup_train
+    self.optimizer = self.build_optimizer(model=self.model,
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\trainer.py", line 667, in build_optimizer
+    raise NotImplementedError(
+NotImplementedError: Optimizer 'adam' not found in list of available optimizers [Adam, AdamW, NAdam, RAdam, RMSProp, SGD, auto].To request support for addition optimizers please visit https://github.com/ultralytics/ultralytics.
+Traceback (most recent call last):
+  File "D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\train.py", line 27, in <module>
+    train()
+  File "D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\train.py", line 20, in train
+    results = model.train(data=dir_path+'/dataset', epochs=100, imgsz=[960,540], rect=True,optimizer='adam',batch=16, lr0=0.001,device=0)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\model.py", line 338, in train
+    self.trainer.train()
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\trainer.py", line 190, in train
+    self._do_train(world_size)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\trainer.py", line 286, in _do_train
+    self._setup_train(world_size)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\trainer.py", line 265, in _setup_train
+    self.optimizer = self.build_optimizer(model=self.model,
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\trainer.py", line 667, in build_optimizer
+    raise NotImplementedError(
+NotImplementedError: Optimizer 'adam' not found in list of available optimizers [Adam, AdamW, NAdam, RAdam, RMSProp, SGD, auto].To request support for addition optimizers please visit https://github.com/ultralytics/ultralytics.

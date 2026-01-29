@@ -1,0 +1,28 @@
+
+[34m[1mAMP: [39m[22mrunning Automatic Mixed Precision (AMP) checks with YOLOv8n...
+WARNING ⚠️ NMS time limit 0.550s exceeded
+[34m[1mAMP: [39m[22mchecks passed ✅
+WARNING ⚠️ updating to 'imgsz=960'. 'train' and 'val' imgsz must be an integer, while 'predict' and 'export' imgsz may be a [h, w] list or an integer, i.e. 'yolo export imgsz=640,480' or 'yolo export imgsz=640'
+
+
+
+
+
+
+
+
+
+
+[34m[1mtrain: [39m[22mScanning D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\dataset\train... 20593 images, 0 corrupt: 100%|██████████| 20593/20593 [00:20<00:00, 1004.05it/s]
+[34m[1mtrain: [39m[22mNew cache created: D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\dataset\train.cache
+
+[34m[1mval: [39m[22mScanning D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\dataset\val... 1918 images, 0 corrupt:  96%|█████████▌| 1918/2000 [00:02<00:00, 867.07it/s]
+
+[34m[1mval: [39m[22mScanning D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\dataset\val... 2000 images, 0 corrupt: 100%|██████████| 2000/2000 [00:02<00:00, 775.33it/s]
+  0%|          | 0/1288 [00:00<?, ?it/s]
+[34m[1moptimizer:[39m[22m Adam(lr=0.0001, momentum=0.937) with parameter groups 26 weight(decay=0.0), 27 weight(decay=0.0005), 27 bias(decay=0.0)
+Image sizes 960 train, 960 val
+Using 8 dataloader workers
+Logging results to [1mruns\classify\train14
+Starting training for 150 epochs...
+

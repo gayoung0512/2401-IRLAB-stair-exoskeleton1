@@ -1,0 +1,165 @@
+[34m[1mAMP: [39m[22mrunning Automatic Mixed Precision (AMP) checks with YOLOv8n...
+[34m[1mAMP: [39m[22mchecks passed ✅
+WARNING ⚠️ updating to 'imgsz=960'. 'train' and 'val' imgsz must be an integer, while 'predict' and 'export' imgsz may be a [h, w] list or an integer, i.e. 'yolo export imgsz=640,480' or 'yolo export imgsz=640'
+
+
+
+[34m[1mtrain: [39m[22mScanning D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\dataset\train... 16000 images, 0 corrupt: 100%|██████████| 16000/16000 [00:07<00:00, 2159.83it/s]
+[34m[1mtrain: [39m[22mNew cache created: D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\dataset\train.cache
+
+[34m[1mval: [39m[22mScanning D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\dataset\val... 2000 images, 0 corrupt: 100%|██████████| 2000/2000 [00:01<00:00, 1078.04it/s]
+[34m[1mval: [39m[22mNew cache created: D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\dataset\val.cache
+[34m[1moptimizer:[39m[22m SGD(lr=0.001, momentum=0.937) with parameter groups 26 weight(decay=0.0), 27 weight(decay=0.0005), 27 bias(decay=0.0)
+Image sizes 960 train, 960 val
+Using 8 dataloader workers
+Logging results to [1mruns\classify\train
+Starting training for 100 epochs...
+      Epoch    GPU_mem       loss  Instances       Size
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      1/100      6.18G      1.228         32        960: 100%|██████████| 500/500 [02:06<00:00,  3.96it/s]
+
+
+               classes   top1_acc   top5_acc:  50%|█████     | 16/32 [00:07<00:07,  2.15it/s]
+Traceback (most recent call last):
+  File "D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\train.py", line 27, in <module>
+    train()
+  File "D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\train.py", line 20, in train
+    results = model.train(data=dir_path+'/dataset', epochs=100, imgsz=[960,540], rect=True,optimizer='SGD',batch=32, lr0=0.001,device=0)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\model.py", line 338, in train
+    self.trainer.train()
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\trainer.py", line 190, in train
+    self._do_train(world_size)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\trainer.py", line 379, in _do_train
+    self.metrics, self.fitness = self.validate()
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\trainer.py", line 483, in validate
+    metrics = self.validator(self)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\validator.py", line 160, in __call__
+    for batch_i, batch in enumerate(bar):
+  File "C:\Users\admin\anaconda3\lib\site-packages\tqdm\std.py", line 1178, in __iter__
+    for obj in iterable:
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\data\build.py", line 42, in __iter__
+    yield next(self.iterator)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\dataloader.py", line 1345, in _next_data
+    return self._process_data(data)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\dataloader.py", line 1371, in _process_data
+    data.reraise()
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\_utils.py", line 694, in reraise
+    raise exception
+RuntimeError: Caught RuntimeError in pin memory thread for device 0.
+Original Traceback (most recent call last):
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\_utils\pin_memory.py", line 37, in do_one_step
+    data = pin_memory(data, device)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\_utils\pin_memory.py", line 63, in pin_memory
+    return type(data)({k: pin_memory(sample, device) for k, sample in data.items()})  # type: ignore[call-arg]
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\_utils\pin_memory.py", line 63, in <dictcomp>
+    return type(data)({k: pin_memory(sample, device) for k, sample in data.items()})  # type: ignore[call-arg]
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\_utils\pin_memory.py", line 58, in pin_memory
+    return data.pin_memory(device)
+RuntimeError: CUDA error: out of memory
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+Traceback (most recent call last):
+  File "D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\train.py", line 27, in <module>
+    train()
+  File "D:\data_reconstruction\연구실\GAROONG\[2401]stair-exoskeleton\vision\train.py", line 20, in train
+    results = model.train(data=dir_path+'/dataset', epochs=100, imgsz=[960,540], rect=True,optimizer='SGD',batch=32, lr0=0.001,device=0)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\model.py", line 338, in train
+    self.trainer.train()
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\trainer.py", line 190, in train
+    self._do_train(world_size)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\trainer.py", line 379, in _do_train
+    self.metrics, self.fitness = self.validate()
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\trainer.py", line 483, in validate
+    metrics = self.validator(self)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\engine\validator.py", line 160, in __call__
+    for batch_i, batch in enumerate(bar):
+  File "C:\Users\admin\anaconda3\lib\site-packages\tqdm\std.py", line 1178, in __iter__
+    for obj in iterable:
+  File "C:\Users\admin\anaconda3\lib\site-packages\ultralytics\data\build.py", line 42, in __iter__
+    yield next(self.iterator)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\dataloader.py", line 1345, in _next_data
+    return self._process_data(data)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\dataloader.py", line 1371, in _process_data
+    data.reraise()
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\_utils.py", line 694, in reraise
+    raise exception
+RuntimeError: Caught RuntimeError in pin memory thread for device 0.
+Original Traceback (most recent call last):
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\_utils\pin_memory.py", line 37, in do_one_step
+    data = pin_memory(data, device)
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\_utils\pin_memory.py", line 63, in pin_memory
+    return type(data)({k: pin_memory(sample, device) for k, sample in data.items()})  # type: ignore[call-arg]
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\_utils\pin_memory.py", line 63, in <dictcomp>
+    return type(data)({k: pin_memory(sample, device) for k, sample in data.items()})  # type: ignore[call-arg]
+  File "C:\Users\admin\anaconda3\lib\site-packages\torch\utils\data\_utils\pin_memory.py", line 58, in pin_memory
+    return data.pin_memory(device)
+RuntimeError: CUDA error: out of memory
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
